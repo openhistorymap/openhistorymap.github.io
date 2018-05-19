@@ -14,6 +14,23 @@ hr{
     margin-right: auto;
 }
 
+.centertext {
+    width: 100%;
+    text-align: center;
+}
+
+.fixed {
+    position:fixed;
+    background-color:#dedede;
+    bottom:0px;
+    height:20px;
+
+}
+
+.border-top {
+    border-top:1px solid darkgray;
+}
+
 .container {
     margin-left: 50px;
     margin-right:50px;
