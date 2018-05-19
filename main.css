@@ -37,6 +37,11 @@ hr{
     margin: 10px;
 }
 
+.disabled{
+    color: #232323;
+    background-color: #aaa;
+}
+
 .card h3{
     margin-top:2px;
 }
