@@ -1,0 +1,43 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Open History Map"
+theme = "ananke"
+toc = true
+sectionPagesMenu = "main"
+
+googleAnalytics = "UA-104661756-3"
+cover_dimming_class = "bg-black-10"
+
+[menu]
+  [[menu.main]]
+    identifier = "map"
+    name = "Map"
+    title = "The Map"
+    url = "https://map.openhistorymap.org"
+    weight = -110
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "The Blog"
+    url = "https://medium.com/open-history-map"
+    weight = -105
+  
+
+    
+    
+
+[params]
+  site_logo = "/LogoKAINUA-1536x769.png"
+  facebook = "https://www.facebook.com/openhistorymap"
+  twitter = "https://twitter.com/ohm_open"
+  youtube = "https://www.youtube.com/channel/UCsyTVfrwSdCIj9MYjkn6pFg"
+  github = "https://github.com/openhistorymap"
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-gray"
+  recent_posts_number = 5
