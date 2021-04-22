@@ -1,5 +1,5 @@
 ---
-title: "Who we are"
+title: "About us"
 ---
 
 _OpenHistoryMap_ is a non profit association with the ambitious aim to connect archaeology and neocartography making history available and usable by anyone.
