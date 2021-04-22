@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Differences with other history visualization projects"
 ---
 

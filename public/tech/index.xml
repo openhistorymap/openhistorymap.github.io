@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Open History Map</title>
+    <link>https://openhistorymap.github.io/tech/</link>
+    <description>Recent content in Tech on Open History Map</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://openhistorymap.github.io/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Differences with other history visualization projects</title>
+      <link>https://openhistorymap.github.io/tech/diifferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://openhistorymap.github.io/tech/diifferences/</guid>
+      <description>Difference with Open Historical Map (OSM&amp;rsquo;s own attempt) The main difference is in the premise: OSM contains data that is verifiable today, while our approach requires data to be verified by researchers. This creates a larger indirection on our side, but it enables us to look a the world in a different way, considering also not just what is real now that comes from a psat, but bringing the whole OSM premise (every data point has to be verifiable&amp;hellip;) into the past (&amp;hellip; not just today but &amp;ldquo;yesteday&amp;rsquo;s today&amp;rdquo;).</description>
+    </item>
+    
+  </channel>
+</rss>

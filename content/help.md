@@ -1,5 +1,6 @@
 ---
 title: "How can you help us?"
+draft: false
 ---
 
 _OpenHistoryMap_ is a non profit so you can help us in several ways:

@@ -1,7 +1,7 @@
 ---
 title: "FOSS4G 2018 - Dar es Salaam"
 date: 2018-04-04T12:26:06+02:00
-draft: true
+draft: false
 ---
 
 * Geocontext and Chcontext geographic information in Cultural Heritage (poster),

@@ -1,5 +1,6 @@
 ---
 title: "Tech"
+draft: false
 featured_image: "marvin-meyer-SYTO3xs06fU-unsplash.jpg"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "FOSS4G 2017 - Boston"
 date: 2017-08-15T12:24:48+02:00
-draft: true
+draft: false
 ---
 
 

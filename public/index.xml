@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open History Map</title>
+    <link>https://openhistorymap.github.io/</link>
+    <description>Recent content on Open History Map</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Apr 2021 21:00:00 +0200</lastBuildDate><atom:link href="https://openhistorymap.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Presentation of Arena Colossei</title>
+      <link>https://openhistorymap.github.io/event/arena_colossei/</link>
+      <pubDate>Wed, 21 Apr 2021 21:00:00 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/event/arena_colossei/</guid>
+      <description>Event organized with Just Play Bologna and Top Hat Games explaining the historical and archaeological reasons and origins for the boardgame Arena Colossei
+  </description>
+    </item>
+    
+    <item>
+      <title>ItWikiCon 2020 - Online</title>
+      <link>https://openhistorymap.github.io/conference/itwikicon_2020_online/</link>
+      <pubDate>Sun, 04 Oct 2020 22:31:44 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/itwikicon_2020_online/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GFossIT/ArcheoFoss 2019 - Padova</title>
+      <link>https://openhistorymap.github.io/conference/gfossit_archeofoss_2019_padova/</link>
+      <pubDate>Wed, 20 Feb 2019 12:27:06 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/gfossit_archeofoss_2019_padova/</guid>
+      <description> Generazione automatica di applicazioni per i Beni Culturali con CHContext Modelli partecipativi nell’archeologia: Wiki e piattaforme open access Applicazioni per I Beni Culturali in CHContext – casi studio (poster)  </description>
+    </item>
+    
+    <item>
+      <title>CHNT2018 - Vienna</title>
+      <link>https://openhistorymap.github.io/conference/chnt2018_vienna/</link>
+      <pubDate>Mon, 12 Nov 2018 12:26:22 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/chnt2018_vienna/</guid>
+      <description> CHContext – easing the creation of GIS readers Bologna 1115 – an interactive experience (poster)  </description>
+    </item>
+    
+    <item>
+      <title>GEOCONTEXT AND CHCONTEXT GEOGRAPHIC INFORMATION IN CULTURAL HERITAGE</title>
+      <link>https://openhistorymap.github.io/paper/isprs_2018/</link>
+      <pubDate>Wed, 11 Jul 2018 12:25:26 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/paper/isprs_2018/</guid>
+      <description>Abstract: Internet presence and applications are central for modern museums and cultural institutions. Even more it is important to facilitate and standardize the user experience in order to create a standard quality level and, for the institutions, it is important to simplify configuration operations bound to the creation of the visualized elements and the explorations of the spaces. This demo covers both the technologies underneath the GeoContext tool and the CHContext visualization generator as well as the possible targets and applications.</description>
+    </item>
+    
+    <item>
+      <title>FOSS4G 2018 - Dar es Salaam</title>
+      <link>https://openhistorymap.github.io/conference/foss4g_2018_dar_es_salaam/</link>
+      <pubDate>Wed, 04 Apr 2018 12:26:06 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/foss4g_2018_dar_es_salaam/</guid>
+      <description> Geocontext and Chcontext geographic information in Cultural Heritage (poster), Detailed 3D elements in geographic context with MapboxGL and Three.js – A Cultural Heritage approach  </description>
+    </item>
+    
+    <item>
+      <title>Giochi e spettacoli nel mondo antico. Problematiche e nuove scoperte – Giornata di Studio – Taneto 2018</title>
+      <link>https://openhistorymap.github.io/conference/taneto_2018_reggio_emilia/</link>
+      <pubDate>Sat, 24 Mar 2018 12:25:26 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/taneto_2018_reggio_emilia/</guid>
+      <description> Interagire con il passato: il caso del Circo di Massenzio  </description>
+    </item>
+    
+    <item>
+      <title>FOSS4G 2017 - Boston</title>
+      <link>https://openhistorymap.github.io/conference/foss4g_2017_boston/</link>
+      <pubDate>Tue, 15 Aug 2017 12:24:48 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/foss4g_2017_boston/</guid>
+      <description> Presentation: https://medium.com/open-history-map/our-presentation-at-foss4g-2017-in-boston-894384d831a2 Video: https://medium.com/open-history-map/our-video-at-foss4g-boston-5084d44fa29  </description>
+    </item>
+    
+    <item>
+      <title>Kainua 2017 - Bologna</title>
+      <link>https://openhistorymap.github.io/conference/kainua_2017_bologna/</link>
+      <pubDate>Fri, 21 Apr 2017 12:23:55 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/kainua_2017_bologna/</guid>
+      <description> Presentazione: https://medium.com/open-history-map/our-presentation-at-kainua-2017-ab5d7638545  </description>
+    </item>
+    
+    <item>
+      <title>Open History Map</title>
+      <link>https://openhistorymap.github.io/paper/aec_28_2017/</link>
+      <pubDate>Wed, 28 Oct 2015 12:25:26 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/paper/aec_28_2017/</guid>
+      <description>Abstract: OpenHistoryMap aspires to become the open source geographical system for archaeological information, both from an academic and an educational point of view. There are many fragmented online web-GIS experiences targeted at very specific projects, but no tool enables a broader overview of both research and studies. For these reasons, in order to create an Open Access platform, one of the most important aspects is the creation of tools that can facilitate both the sharing of archaeological spatial and temporal information as well as the easy reuse of the generated data.</description>
+    </item>
+    
+    <item>
+      <title>Open history map - a new approach to open access for archaeology and cultural heritage</title>
+      <link>https://openhistorymap.github.io/paper/dh15_7419557/</link>
+      <pubDate>Wed, 28 Oct 2015 12:25:26 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/paper/dh15_7419557/</guid>
+      <description>Abstract: Open Access is a growing idea in many fields. Archaeology is at the moment a bit behind. The reasons can be found in many aspects: First of all, archaeological data is not easy to monetize, and it is not easy to standardize, and this has pushed the creation of many “archaeologies”, and that is visible from the data gathered during expeditions. There are many fragmented webgis experiences targeted at very specific projects, but there is no tool that enables a more broad overview of both researches and studies.</description>
+    </item>
+    
+    <item>
+      <title>DH2015 - Granada</title>
+      <link>https://openhistorymap.github.io/conference/dh2015_granada/</link>
+      <pubDate>Sat, 04 Apr 2015 12:20:40 +0200</pubDate>
+      
+      <guid>https://openhistorymap.github.io/conference/dh2015_granada/</guid>
+      <description> Open history map – a new approach to open access for archaeology and cultural heritage  </description>
+    </item>
+    
+    <item>
+      <title>About us</title>
+      <link>https://openhistorymap.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://openhistorymap.github.io/about/</guid>
+      <description>OpenHistoryMap is a non profit association with the ambitious aim to connect archaeology and neocartography making history available and usable by anyone.
+Modern archaeological research is a hot topic, a sequence of major and minor discoveries changing the complex historical puzzle of our past.
+Understading the historical processes, necessitating the passage through sythesis and the study of an enormous quantity of data requires way longer than usual archaeological data analysis.</description>
+    </item>
+    
+    <item>
+      <title>Differences with other history visualization projects</title>
+      <link>https://openhistorymap.github.io/tech/diifferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://openhistorymap.github.io/tech/diifferences/</guid>
+      <description>Difference with Open Historical Map (OSM&amp;rsquo;s own attempt) The main difference is in the premise: OSM contains data that is verifiable today, while our approach requires data to be verified by researchers. This creates a larger indirection on our side, but it enables us to look a the world in a different way, considering also not just what is real now that comes from a psat, but bringing the whole OSM premise (every data point has to be verifiable&amp;hellip;) into the past (&amp;hellip; not just today but &amp;ldquo;yesteday&amp;rsquo;s today&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>How can you help us?</title>
+      <link>https://openhistorymap.github.io/help/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://openhistorymap.github.io/help/</guid>
+      <description>OpenHistoryMap is a non profit so you can help us in several ways:
+ By becoming a member (send us a mail at memberships@openhistorymap.org) By informing us about datasets you know about (a new project is coming up with more on this)  </description>
+    </item>
+    
+  </channel>
+</rss>

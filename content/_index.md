@@ -1,5 +1,6 @@
 ---
 featured_image: "BACK-1980x1114.png"
+draft: false
 description: "The Digital Map of the Past"
 ---
 
