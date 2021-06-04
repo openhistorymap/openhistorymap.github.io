@@ -24,7 +24,7 @@ googleAnalytics = "UA-104661756-3"
     identifier = "blog"
     name = "Blog"
     title = "The Blog"
-    url = "https://medium.com/open-history-map"
+    url = "https://blog.openhistorymap.org/"
     weight = -105
   [[menu.main]]
     identifier = "about"

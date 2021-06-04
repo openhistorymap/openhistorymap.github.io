@@ -2,7 +2,7 @@
 title: "GEOCONTEXT AND CHCONTEXT GEOGRAPHIC INFORMATION IN CULTURAL HERITAGE"
 date: 2018-07-11T12:25:26+02:00
 draft: false
-doi: "10.5194/isprs-archives-XLII-4-W8-129-2018"
+doi: "https://doi.org/10.5194/isprs-archives-XLII-4-W8-129-2018"
 address: "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-4-W8/129/2018/"
 ---
 
