@@ -20,5 +20,5 @@ _OpenHistoryMap_ tries to close this gap even by a little, giving anybody the po
 # Our Partners
 * Modal Nodes - technology partner
 
-#Funding
-<img src="/Shuttleworth Funded.png">
+# Funding
+![Shuttleworth Funded](/static/Shuttleworth Funded.png)
