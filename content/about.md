@@ -22,4 +22,4 @@ _OpenHistoryMap_ tries to close this gap even by a little, giving anybody the po
 
 # Funding
 
-<img alt="Shuttleworth Funded" style="max-width: 100%; width: auto; height: auto;" src="/Shuttleworth Funded.png" />
+{{< figure src="/Shuttleworth Funded.svg" height="100" alt="Shuttleworth Funded" >}}
