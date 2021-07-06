@@ -8,7 +8,7 @@ _OpenHistoryMap_ is a non profit so you can help us in several ways:
 * By becoming a member (send us a mail at memberships@openhistorymap.org) 
 * By informing us about datasets you know about (a new project is coming up with more on this)
 * By donating (stripe)
-{{% donorbox /%}}
+{{< donorbox />}}
 
 <!--
 * By subscribing to our Patreon
