@@ -11,4 +11,4 @@ OpenHistoryMap tries to close this gap even by a little, giving anybody the poss
 ----
 
 OHM was funded by
-# Shuttleworth Foudnation
+# Shuttleworth Foundation
