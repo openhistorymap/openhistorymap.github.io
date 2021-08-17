@@ -37,6 +37,13 @@
       {{if .Params.address}}
       <div>Address: <a href="{{.Params.address}}" target="_blank">{{.Params.address}}</a></div>
       {{end}}
+      {{if .Params.slides}}
+      <div>Slides: <a href="{{.Params.slides}}" target="_blank">{{.Params.slides}}</a></div>
+      {{end}}
+      {{if .Params.video}}
+      <div>Video: <a href="https://www.youtube.com/watch?v={{.Params.video}}" target="_blank">{{.Params.video}}</a></div>
+       {{< youtube .Params.video >}}
+      {{end}}
 
       {{/*
           Show "reading time" and "word count" but only if one of the following are true:
