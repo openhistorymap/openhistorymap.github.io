@@ -1,5 +1,5 @@
 ---
-title: "GFossIT/ArcheoFoss 2021 - Online"
+title: "ArcheoFoss 2021 - Online"
 date: 2021-11-26T09:30:00+02:00
 draft: false
 ---
