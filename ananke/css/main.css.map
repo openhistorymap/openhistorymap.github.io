@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/home/runner/work/openhistorymap.github.io/openhistorymap.github.io",
+	"sourceRoot": "/src",
 	"sources": [
 		"ananke/css/main.css"
 	],
