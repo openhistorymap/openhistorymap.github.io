@@ -1,12 +1,4 @@
-/* =========================================================================
-   OHM theme — cartographic / surveyor register
-   ========================================================================= */
-
-@layer reset, tokens, base, layout, components, plate, utilities;
-
-/* ---------- reset ----------------------------------------------------- */
-@layer reset {
-  *, *::before, *::after { box-sizing: border-box; }
+@layer reset,tokens,base,layout,components,plate,utilities;@layer reset{*, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd { margin: 0; }
   ul[role="list"], ol[role="list"] { list-style: none; padding: 0; margin: 0; }
@@ -22,14 +14,10 @@
     background: color-mix(in oklch, var(--terracotta) 25%, transparent);
     color: var(--ink);
   }
-}
-
-/* ---------- tokens ---------------------------------------------------- */
-@layer tokens {
-  :root {
+}@layer tokens{:root {
     color-scheme: light dark;
 
-    /* Brand palette — light / dark via light-dark() */
+    
     --paper:        light-dark(oklch(0.97 0.008 80),  oklch(0.18 0.012 250));
     --paper-deep:   light-dark(oklch(0.94 0.010 80),  oklch(0.15 0.012 250));
     --ink:          light-dark(oklch(0.22 0.015 80),  oklch(0.92 0.010 80));
@@ -40,17 +28,17 @@
     --terracotta:   light-dark(oklch(0.55 0.15  35),  oklch(0.68 0.14  35));
     --patina:       light-dark(oklch(0.50 0.08 220),  oklch(0.62 0.07 220));
 
-    /* Type families */
+    
     --font-display: "Petrona", "EB Garamond", "Hoefler Text", "Iowan Old Style", Georgia, serif;
     --font-body:    "Hanken Grotesk", "Helvetica Neue", -apple-system, system-ui, sans-serif;
     --font-meta:    "PT Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-    /* Type scale — body fixed rem ladder, display fluid clamp */
-    --t-meta:       0.75rem;       /* 12px — meta strip, captions */
-    --t-meta-lg:    0.8125rem;     /* 13px — nav labels */
-    --t-body-sm:    0.9375rem;     /* 15px — secondary body */
-    --t-body:       1.0625rem;     /* 17px — primary body */
-    --t-body-lg:    1.1875rem;     /* 19px — lede */
+    
+    --t-meta:       0.75rem;       
+    --t-meta-lg:    0.8125rem;     
+    --t-body-sm:    0.9375rem;     
+    --t-body:       1.0625rem;     
+    --t-body-lg:    1.1875rem;     
 
     --t-h4: clamp(1.125rem, 0.95rem + 0.6vw, 1.4rem);
     --t-h3: clamp(1.4rem,   1.1rem  + 1.2vw, 2rem);
@@ -58,13 +46,13 @@
     --t-h1: clamp(2.5rem,   1.6rem  + 3.8vw, 4.7rem);
     --t-display: clamp(3.2rem, 1.6rem + 6.4vw, 7rem);
 
-    /* Weights */
+    
     --w-body:    400;
     --w-medium:  500;
     --w-semi:    600;
     --w-bold:    700;
 
-    /* Spacing — 4pt scale */
+    
     --sp-1:  0.25rem;
     --sp-2:  0.5rem;
     --sp-3:  0.75rem;
@@ -76,13 +64,13 @@
     --sp-24: 6rem;
     --sp-32: 8rem;
 
-    /* Layout */
+    
     --measure: 65ch;
     --gutter: clamp(1.25rem, 4vw, 2.5rem);
     --page-max: 78rem;
 
-    /* Motion */
-    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);    /* ease-out-quint */
+    
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);    
     --t-fast:   140ms;
     --t-med:    260ms;
   }
@@ -93,11 +81,7 @@
       transition-duration: 0.01ms !important;
     }
   }
-}
-
-/* ---------- base ------------------------------------------------------ */
-@layer base {
-  html {
+}@layer base{html {
     font-family: var(--font-body);
     font-size: 100%;
     line-height: 1.55;
@@ -113,7 +97,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
-  /* Light text on dark needs slightly more leading */
+  
   @media (prefers-color-scheme: dark) {
     html { line-height: 1.62; }
   }
@@ -189,13 +173,7 @@
 
   ul, ol { padding-left: 1.4em; }
   li + li { margin-top: var(--sp-2); }
-}
-
-/* ---------- layout ---------------------------------------------------- */
-@layer layout {
-  /* The page grid — explicit columns the reader can sense.
-     12-column on wide, collapses to single column under 720px. */
-  .ohm-grid {
+}@layer layout{.ohm-grid {
     display: grid;
     grid-template-columns:
       [edge-l] var(--gutter)
@@ -217,7 +195,7 @@
     width: 100%;
   }
 
-  /* Span helpers — name-based so templates read like prose */
+  
   .span-margin-l { grid-column: margin-l / main-l; }
   .span-main     { grid-column: main-l / main-r; }
   .span-margin-r { grid-column: main-r / margin-r; }
@@ -227,13 +205,7 @@
   @media (max-width: 720px) {
     .span-margin-l, .span-margin-r { grid-column: main-l / main-r; }
   }
-}
-
-/* ---------- components ----------------------------------------------- */
-@layer components {
-
-  /* ----- meta strip — the surveyor's header ----- */
-  .meta-strip {
+}@layer components{.meta-strip {
     font-family: var(--font-meta);
     font-size: var(--t-meta);
     text-transform: uppercase;
@@ -268,7 +240,7 @@
     font-weight: var(--w-body);
   }
 
-  /* ----- nav ----- */
+  
   .nav {
     padding-block: var(--sp-4);
     display: flex;
@@ -331,7 +303,7 @@
     margin-left: 0.15em;
   }
 
-  /* ----- footer ----- */
+  
   .footer {
     margin-top: var(--sp-24);
     padding-block: var(--sp-8) var(--sp-12);
@@ -375,7 +347,7 @@
     text-decoration-color: var(--rule-strong);
   }
 
-  /* ----- summary list (used on home + section list pages) ----- */
+  
   .summaries {
     list-style: none;
     padding: 0;
@@ -451,7 +423,7 @@
     .summary__year { display: none; }
   }
 
-  /* ----- prose (the article body) ----- */
+  
   .prose {
     max-width: var(--measure);
     font-size: var(--t-body);
@@ -474,7 +446,7 @@
     letter-spacing: 0.05em;
   }
 
-  /* ----- article header (no plate) ----- */
+  
   .article-head {
     padding-block: var(--sp-8) var(--sp-12);
     display: grid;
@@ -516,7 +488,7 @@
   .article-head__byline div { display: inline-block; }
   .article-head__byline a { text-decoration-color: var(--rule-strong); }
 
-  /* ----- index hero (homepage) ----- */
+  
   .home-hero {
     padding-block: var(--sp-12) var(--sp-16);
     display: grid;
@@ -576,7 +548,7 @@
     gap: var(--sp-4);
   }
 
-  /* Section heading used on homepage between blocks */
+  
   .section-rule {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -598,7 +570,7 @@
   }
   .section-rule::before { width: var(--sp-6); }
 
-  /* tags */
+  
   .tag-list {
     list-style: none;
     padding: 0;
@@ -624,7 +596,7 @@
     color: var(--ink);
   }
 
-  /* theme toggle */
+  
   .theme-toggle {
     background: none;
     border: 1px solid var(--rule);
@@ -643,7 +615,7 @@
   :root[data-theme="dark"] .theme-toggle__sun { display: inline; }
   :root[data-theme="dark"] .theme-toggle__moon { display: none; }
 
-  /* skip link */
+  
   .skip-link {
     position: absolute;
     left: var(--sp-4);
@@ -661,17 +633,7 @@
     z-index: 100;
   }
   .skip-link:focus { transform: translateY(0); }
-}
-
-/* ---------- plate (the cover-image hero) ----------------------------- */
-@layer plate {
-  /* The plate is a numbered, captioned, framed image — like a survey-atlas plate.
-     It sits inside the main grid; corner ticks (crop-mark style) reinforce the
-     "this is a plate of record" reading. Title and metadata sit beside or below,
-     never overlaid. For pages without an image, the same scaffolding renders
-     without the frame, keeping the grammar consistent. */
-
-  .plate-block {
+}@layer plate{.plate-block {
     padding-block: var(--sp-8) var(--sp-12);
     display: grid;
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
@@ -701,7 +663,7 @@
   }
   .plate:hover img { transform: scale(1.015); }
 
-  /* Corner ticks — crop marks. Positioned outside the plate edge by 6px. */
+  
   .plate::before,
   .plate::after,
   .plate > .tick-tl,
@@ -772,10 +734,7 @@
     margin-right: var(--sp-2);
   }
 
-  /* Hero variant — used on the homepage and on section list pages where the
-     section's _index.md carries a featured_image. Bigger title, more vertical
-     breathing room, and a slot for a small set of outbound links beneath the
-     lede. The image still sits in a framed plate; nothing is overlaid. */
+  
   .plate-block--hero {
     grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
     gap: var(--sp-12) var(--sp-16);
@@ -835,11 +794,7 @@
     border-color: var(--terracotta);
     gap: var(--sp-4);
   }
-}
-
-/* ---------- utilities ------------------------------------------------ */
-@layer utilities {
-  .visually-hidden {
+}@layer utilities{.visually-hidden {
     position: absolute !important;
     width: 1px; height: 1px;
     padding: 0; margin: -1px;

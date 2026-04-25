@@ -2,25 +2,37 @@
   <div class="span-content">
     {{ partial "meta-strip.html" . }}
 
-    <section class="home-hero">
-      <h1 class="home-hero__title">
-        Open History Map<em>.</em>
-      </h1>
-      <p class="home-hero__lede">
-        {{- with .Description -}}
-          {{ . }}
-        {{- else -}}
-          An open-source web GIS for archaeology and the digital humanities. Made in Bologna by archaeologists and developers since 2015.
-        {{- end -}}
-      </p>
-      <div class="home-hero__links">
-        <a class="home-hero__link" href="https://map.openhistorymap.org">Open the map</a>
-        <a class="home-hero__link" href="https://index.openhistorymap.org">Browse the index</a>
-        <a class="home-hero__link" href="https://blog.openhistorymap.org">Read the blog</a>
+    {{- $img := .Params.featured_image -}}
+    {{- $lede := .Description | default "An open-source web GIS for archaeology and the digital humanities. Made in Bologna by archaeologists and developers since 2015." -}}
+
+    <section class="plate-block plate-block--hero" aria-labelledby="home-title">
+      {{- if $img }}
+        <figure class="plate" role="img" aria-label="Open History Map cover">
+          <img src="{{ $img | absURL }}" alt="" loading="eager" decoding="async" />
+          <span class="tick-bl" aria-hidden="true"></span>
+          <span class="tick-br" aria-hidden="true"></span>
+        </figure>
+      {{- end }}
+
+      <div class="plate-block__type">
+        <h1 id="home-title" class="plate-block__title">Open History Map<em>.</em></h1>
+        <p class="plate-block__lede">{{ $lede }}</p>
+        <nav class="plate-block__nav" aria-label="The OHM platform">
+          <a href="https://map.openhistorymap.org">Open the map</a>
+          <a href="https://index.openhistorymap.org">Browse the index</a>
+          <a href="https://blog.openhistorymap.org">Read the blog</a>
+        </nav>
+
+        {{- if $img }}
+          <div class="plate-block__caption">
+            <span><strong>Fig.</strong> Plate №.{{ substr (md5 .Permalink) 0 4 | upper }}</span>
+            <span><strong>Cover</strong> {{ $img | path.Base }}</span>
+          </div>
+        {{- end }}
       </div>
     </section>
 
-    {{- /* Recent items: pull from mainSections (default conference) and merge with paper for a richer feed. */ -}}
+    {{- /* Recent items: pull from mainSections (default conference + paper). */ -}}
     {{- $mainSections := .Site.Params.mainSections | default (slice "conference" "paper") -}}
     {{- $items := where .Site.RegularPages "Section" "in" $mainSections -}}
     {{- $items = $items.ByDate.Reverse -}}

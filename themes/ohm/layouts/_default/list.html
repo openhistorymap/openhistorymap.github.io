@@ -2,14 +2,36 @@
   <div class="span-content">
     {{ partial "meta-strip.html" . }}
 
-    <header class="article-head">
-      <h1 class="article-head__title">{{ .Title | default (.Section | humanize) }}</h1>
-      {{- with .Description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
-      {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
-    </header>
+    {{- $img := .Params.featured_image -}}
+
+    {{- if $img -}}
+      <section class="plate-block plate-block--hero" aria-labelledby="list-title">
+        <figure class="plate" role="img" aria-label="{{ .Title }}">
+          <img src="{{ $img | absURL }}" alt="" loading="eager" decoding="async" />
+          <span class="tick-bl" aria-hidden="true"></span>
+          <span class="tick-br" aria-hidden="true"></span>
+        </figure>
+        <div class="plate-block__type">
+          <h1 id="list-title" class="plate-block__title">{{ .Title | default (.Section | humanize) }}</h1>
+          {{- with .Description }}<p class="plate-block__lede">{{ . }}</p>{{ end }}
+          {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+          <div class="plate-block__caption">
+            <span><strong>Fig.</strong> Plate №.{{ substr (md5 .Permalink) 0 4 | upper }}</span>
+            <span><strong>Section</strong> {{ .Section | humanize }} · {{ len .RegularPages }} entries</span>
+          </div>
+        </div>
+      </section>
+    {{- else -}}
+      <header class="article-head">
+        <h1 class="article-head__title">{{ .Title | default (.Section | humanize) }}</h1>
+        {{- with .Description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
+        {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+      </header>
+    {{- end }}
 
     {{- $pages := .RegularPages -}}
     {{- if $pages }}
+      <h2 class="section-rule"><span>{{ if $img }}Entries{{ else }}All {{ .Title | default (.Section | humanize) | lower }}{{ end }}</span></h2>
       <ul class="summaries" role="list">
         {{- range $pages.ByDate.Reverse }}
           {{ partial "summary.html" . }}
