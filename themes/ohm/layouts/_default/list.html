@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <div class="span-content">
+    {{ partial "meta-strip.html" . }}
+
+    <header class="article-head">
+      <h1 class="article-head__title">{{ .Title | default (.Section | humanize) }}</h1>
+      {{- with .Description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
+      {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    </header>
+
+    {{- $pages := .RegularPages -}}
+    {{- if $pages }}
+      <ul class="summaries" role="list">
+        {{- range $pages.ByDate.Reverse }}
+          {{ partial "summary.html" . }}
+        {{- end }}
+      </ul>
+    {{- else }}
+      <p class="prose" style="color: var(--ink-muted)">
+        Nothing here yet — this section will list <em>{{ .Title | default (.Section | humanize) | lower }}</em> as they're published.
+      </p>
+    {{- end }}
+  </div>
+{{ end }}

@@ -1,0 +1,32 @@
+{{- /* Meta strip — surveyor's header. Renders breadcrumb on the left and
+       a deterministic plate number on the right. The plate number is the
+       first 4 hex chars of MD5(permalink), prefixed №. */ -}}
+{{- $plateNo := substr (md5 .Permalink) 0 4 | upper -}}
+{{- $section := .Section -}}
+{{- $sectionPage := false -}}
+{{- if and $section (ne $section "") -}}
+  {{- with .Site.GetPage (printf "/%s" $section) -}}
+    {{- if ne .RelPermalink "/" -}}{{- $sectionPage = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $isSectionRoot := and $sectionPage (eq $sectionPage.RelPermalink .RelPermalink) -}}
+<div class="meta-strip">
+  <div class="meta-strip__breadcrumb">
+    {{- if .IsHome -}}
+      <span>Index</span><span class="meta-strip__sep"></span>
+      <span>{{ now.Format "2006-01-02" }}</span>
+    {{- else if and $sectionPage (not $isSectionRoot) -}}
+      <a href="{{ "/" | relURL }}">Open History Map</a>
+      <span class="meta-strip__sep"></span>
+      <a href="{{ $sectionPage.RelPermalink }}">{{ $sectionPage.Title | default ($section | humanize) }}</a>
+      {{- with .Date }}{{ if not .IsZero }}<span class="meta-strip__sep"></span><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006-01-02" }}</time>{{ end }}{{ end -}}
+    {{- else -}}
+      <a href="{{ "/" | relURL }}">Open History Map</a>
+      <span class="meta-strip__sep"></span>
+      <span>{{ .Title | default ($section | humanize) | default "Page" }}</span>
+    {{- end -}}
+  </div>
+  <div class="meta-strip__plate-no" title="Plate number — derived from the page URL">
+    Plate <b>№.{{ $plateNo }}</b>
+  </div>
+</div>

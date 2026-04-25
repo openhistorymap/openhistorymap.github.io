@@ -1,0 +1,21 @@
+{{- /* One row in a summary list. Three columns:
+       [plate-no] [title + meta + excerpt] [year]
+       Used on the homepage feed and on section list pages. */ -}}
+{{- $plateNo := substr (md5 .Permalink) 0 4 | upper -}}
+{{- $year := "" -}}
+{{- if and .Date (not .Date.IsZero) }}{{ $year = .Date.Format "2006" }}{{ end -}}
+<li class="summary">
+  <div class="summary__plate-no">№.{{ $plateNo }}</div>
+  <div>
+    <h3 class="summary__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <div class="summary__meta">
+      {{- with .Date }}{{ if not .IsZero }}<span><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "Jan 2, 2006" }}</time></span>{{ end }}{{ end -}}
+      {{- with .Params.author }}<span>{{ if reflect.IsSlice . }}{{ delimit . ", " }}{{ else }}{{ . }}{{ end }}</span>{{ end -}}
+      <span>{{ .Section | humanize }}</span>
+    </div>
+    {{- if .Description }}<p class="summary__excerpt">{{ .Description }}</p>
+    {{- else if .Summary }}<p class="summary__excerpt">{{ .Summary | plainify | truncate 180 }}</p>
+    {{- end }}
+  </div>
+  <div class="summary__year">{{ $year }}</div>
+</li>

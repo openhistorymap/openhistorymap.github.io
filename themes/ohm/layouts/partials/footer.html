@@ -1,0 +1,49 @@
+  <footer class="ohm-grid ohm-page footer" role="contentinfo">
+    <div class="span-content">
+      <div class="footer__row">
+        <div class="footer__col">
+          <h5>The map</h5>
+          <ul>
+            <li><a href="https://map.openhistorymap.org">map.openhistorymap.org</a></li>
+            <li><a href="https://index.openhistorymap.org">index.openhistorymap.org</a></li>
+            <li><a href="https://blog.openhistorymap.org">blog.openhistorymap.org</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>The association</h5>
+          <ul>
+            <li><a href="{{ "/about" | relURL }}">About</a></li>
+            <li><a href="{{ "/help" | relURL }}">Help us</a></li>
+            <li><a href="{{ "/Statuto_OHM.pdf" | relURL }}">Statuto (IT)</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Index</h5>
+          <ul>
+            <li><a href="{{ "/conference" | relURL }}">Conferences</a></li>
+            <li><a href="{{ "/paper" | relURL }}">Papers</a></li>
+            <li><a href="{{ "/event" | relURL }}">Events</a></li>
+            <li><a href="{{ "/tech" | relURL }}">Tech notes</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Elsewhere</h5>
+          <ul>
+            {{- with .Site.Params.github }}<li><a href="{{ . }}" rel="noopener">GitHub</a></li>{{ end }}
+            {{- with .Site.Params.facebook }}<li><a href="{{ . }}" rel="noopener">Facebook</a></li>{{ end }}
+            {{- with .Site.Params.twitter }}<li><a href="{{ . }}" rel="noopener">Twitter</a></li>{{ end }}
+            {{- with .Site.Params.youtube }}<li><a href="{{ . }}" rel="noopener">YouTube</a></li>{{ end }}
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__colophon">
+        Open History Map is a non-profit association (APS) registered in Bologna, Italy.
+        Site set in <a href="https://fonts.google.com/specimen/Petrona">Petrona</a>,
+        <a href="https://fonts.google.com/specimen/Hanken+Grotesk">Hanken Grotesk</a> and
+        <a href="https://fonts.google.com/specimen/PT+Mono">PT Mono</a>.
+        Funded in part by the <a href="https://www.shuttleworthfoundation.org/">Shuttleworth Foundation</a>.
+        © 2015–{{ now.Year }} OHM APS.
+      </p>
+    </div>
+  </footer>

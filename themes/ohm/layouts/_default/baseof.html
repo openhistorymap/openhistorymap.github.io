@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}" data-theme="auto">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <header class="ohm-grid ohm-page" role="banner">
+      <div class="span-content">
+        {{ partial "nav.html" . }}
+      </div>
+    </header>
+
+    <main id="main" class="ohm-grid ohm-page" role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ partial "analytics.html" . }}
+    <script>
+      // Theme toggle: respects OS by default, persists user override in localStorage.
+      (function () {
+        var root = document.documentElement;
+        var stored = null;
+        try { stored = localStorage.getItem("ohm-theme"); } catch (e) {}
+        if (stored === "light" || stored === "dark") root.dataset.theme = stored;
+        else root.dataset.theme = "auto";
+        // light-dark() needs color-scheme: light dark on the root, and we toggle
+        // the actual rendering by setting color-scheme on documentElement when
+        // the user overrides the OS preference.
+        function applyScheme(t) {
+          if (t === "light")      root.style.colorScheme = "light";
+          else if (t === "dark")  root.style.colorScheme = "dark";
+          else                    root.style.colorScheme = "light dark";
+        }
+        applyScheme(root.dataset.theme);
+        document.addEventListener("click", function (e) {
+          var btn = e.target.closest("[data-theme-toggle]");
+          if (!btn) return;
+          e.preventDefault();
+          var current = root.dataset.theme;
+          var next;
+          // If currently auto, flip to the opposite of OS preference.
+          if (current === "auto") {
+            var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            next = prefersDark ? "light" : "dark";
+          } else {
+            next = current === "dark" ? "light" : "dark";
+          }
+          root.dataset.theme = next;
+          applyScheme(next);
+          try { localStorage.setItem("ohm-theme", next); } catch (e) {}
+        });
+      })();
+    </script>
+  </body>
+</html>

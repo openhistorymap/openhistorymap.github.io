@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <div class="span-content">
+    <div class="meta-strip">
+      <div class="meta-strip__breadcrumb">
+        <a href="{{ "/" | relURL }}">Open History Map</a>
+        <span class="meta-strip__sep"></span>
+        <span>404 / Not surveyed</span>
+      </div>
+      <div class="meta-strip__plate-no">Plate <b>№.????</b></div>
+    </div>
+
+    <header class="article-head">
+      <h1 class="article-head__title">This plate has not been surveyed.</h1>
+      <p class="article-head__lede">
+        The page you asked for isn't in our index. It may have moved with a section rename, or it may simply not exist yet.
+      </p>
+    </header>
+
+    <div class="prose">
+      <p>Try one of these instead:</p>
+      <ul>
+        <li><a href="{{ "/" | relURL }}">The home index</a></li>
+        <li><a href="{{ "/conference" | relURL }}">All conferences</a></li>
+        <li><a href="{{ "/paper" | relURL }}">All papers</a></li>
+        <li><a href="https://map.openhistorymap.org">The actual map</a></li>
+      </ul>
+    </div>
+  </div>
+{{ end }}

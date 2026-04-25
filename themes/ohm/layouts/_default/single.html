@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <article class="span-content">
+    {{ partial "meta-strip.html" . }}
+
+    {{- if .Params.featured_image -}}
+      {{ partial "plate.html" . }}
+    {{- else -}}
+      {{ partial "article-head.html" . }}
+    {{- end }}
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{- with .Params.tags -}}
+      <ul class="tag-list">
+        {{- range . -}}
+          <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a></li>
+        {{- end -}}
+      </ul>
+    {{- end -}}
+  </article>
+{{ end }}

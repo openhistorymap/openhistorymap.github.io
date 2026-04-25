@@ -1,0 +1,25 @@
+{{- /* Inline figure shortcode — matches the plate visual language but smaller.
+       Usage: {{< figure src="/foo.jpg" alt="…" caption="…" credit="…" >}}
+       Drop-in for ananke's stock figure shortcode. */ -}}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" -}}
+{{- $credit := .Get "credit" -}}
+{{- $height := .Get "height" -}}
+{{- $width := .Get "width" -}}
+<figure class="prose-figure" style="margin-block: var(--sp-8);">
+  <div style="position: relative; display: inline-block; max-width: 100%;">
+    <img src="{{ $src | absURL }}" alt="{{ $alt }}"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}
+         loading="lazy" decoding="async"
+         style="display: block; max-width: 100%; height: auto;" />
+  </div>
+  {{- if or $caption $credit }}
+  <figcaption style="margin-top: var(--sp-2); font-family: var(--font-meta); font-size: var(--t-meta); color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+    {{- with $caption }}{{ . }}{{ end -}}
+    {{- if and $caption $credit }} · {{ end -}}
+    {{- with $credit }}{{ . | safeHTML }}{{ end -}}
+  </figcaption>
+  {{- end }}
+</figure>

@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <div class="span-content">
+    {{ partial "meta-strip.html" . }}
+
+    <section class="home-hero">
+      <h1 class="home-hero__title">
+        Open History Map<em>.</em>
+      </h1>
+      <p class="home-hero__lede">
+        {{- with .Description -}}
+          {{ . }}
+        {{- else -}}
+          An open-source web GIS for archaeology and the digital humanities. Made in Bologna by archaeologists and developers since 2015.
+        {{- end -}}
+      </p>
+      <div class="home-hero__links">
+        <a class="home-hero__link" href="https://map.openhistorymap.org">Open the map</a>
+        <a class="home-hero__link" href="https://index.openhistorymap.org">Browse the index</a>
+        <a class="home-hero__link" href="https://blog.openhistorymap.org">Read the blog</a>
+      </div>
+    </section>
+
+    {{- /* Recent items: pull from mainSections (default conference) and merge with paper for a richer feed. */ -}}
+    {{- $mainSections := .Site.Params.mainSections | default (slice "conference" "paper") -}}
+    {{- $items := where .Site.RegularPages "Section" "in" $mainSections -}}
+    {{- $items = $items.ByDate.Reverse -}}
+    {{- $n := .Site.Params.recent_posts_number | default 6 -}}
+
+    {{- if $items }}
+      <h2 class="section-rule"><span>Recent from the field</span></h2>
+      <ul class="summaries" role="list">
+        {{- range first $n $items }}
+          {{ partial "summary.html" . }}
+        {{- end }}
+      </ul>
+      {{- if gt (len $items) $n }}
+        <p style="margin-top: var(--sp-6)">
+          <a class="home-hero__link" href="{{ "/conference" | relURL }}">All conferences</a>
+        </p>
+      {{- end }}
+    {{- end }}
+
+    {{- with .Content -}}
+      <div class="prose" style="margin-top: var(--sp-16)">{{ . }}</div>
+    {{- end -}}
+  </div>
+{{ end }}

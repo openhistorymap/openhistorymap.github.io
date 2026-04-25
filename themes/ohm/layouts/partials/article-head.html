@@ -1,0 +1,21 @@
+{{- /* Typographic-only header for pages without a featured image. */ -}}
+{{- $hasMeta := or (and .Date (not .Date.IsZero)) .Params.author .Params.address .Params.doi .Params.slides .Params.video -}}
+<header class="article-head">
+  <h1 class="article-head__title">{{ .Title }}</h1>
+  {{- with .Params.description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
+
+  {{- if $hasMeta }}
+  <dl class="article-head__byline">
+    {{- with .Date }}{{ if not .IsZero }}<div><dt>Date</dt><dd><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time></dd></div>{{ end }}{{ end -}}
+    {{- with .Params.author }}
+      <div><dt>By</dt><dd>
+        {{- if reflect.IsSlice . }}{{ delimit . ", " | markdownify }}{{ else }}{{ . | markdownify }}{{ end -}}
+      </dd></div>
+    {{- end }}
+    {{- with .Params.address }}<div><dt>Venue</dt><dd><a href="{{ . }}" rel="noopener">{{ . }}</a></dd></div>{{ end }}
+    {{- with .Params.doi }}<div><dt>DOI</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://(dx\\.)?doi\\.org/" "" }}</a></dd></div>{{ end }}
+    {{- with .Params.slides }}<div><dt>Slides</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://" "" | truncate 40 }}</a></dd></div>{{ end }}
+    {{- with .Params.video }}<div><dt>Video</dt><dd><a href="https://www.youtube.com/watch?v={{ . }}" rel="noopener">YouTube</a></dd></div>{{ end }}
+  </dl>
+  {{- end }}
+</header>

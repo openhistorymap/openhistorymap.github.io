@@ -1,0 +1,31 @@
+{{- /* The plate — image-as-numbered-plate hero. If the page has featured_image
+       in its front matter, render the framed plate; otherwise render only the
+       typographic header (same grammar, no plate). */ -}}
+{{- $img := .Params.featured_image -}}
+{{- $alt := .Params.featured_image_alt | default .Title -}}
+{{- $caption := .Params.featured_image_caption -}}
+{{- $credit := .Params.featured_image_credit -}}
+
+<section class="plate-block" aria-labelledby="plate-title">
+  {{- if $img }}
+    <figure class="plate" role="img" aria-label="{{ $alt }}">
+      <img src="{{ $img | absURL }}" alt="{{ $alt }}" loading="eager" decoding="async" />
+      <span class="tick-bl" aria-hidden="true"></span>
+      <span class="tick-br" aria-hidden="true"></span>
+    </figure>
+  {{- end }}
+
+  <div class="plate-block__type">
+    <h1 id="plate-title" class="plate-block__title">{{ .Title }}</h1>
+    {{- with .Params.description }}<p class="plate-block__lede">{{ . }}</p>{{ end }}
+
+    {{- /* Caption strip — only renders when a plate is present and caption/credit data exists. */ -}}
+    {{- if $img }}
+      <div class="plate-block__caption">
+        <span><strong>Fig.</strong> Plate №.{{ substr (md5 .Permalink) 0 4 | upper }}</span>
+        {{- with $caption }}<span><strong>Caption</strong> {{ . }}</span>{{ end }}
+        {{- with $credit }}<span><strong>Credit</strong> {{ . | safeHTML }}</span>{{ end }}
+      </div>
+    {{- end }}
+  </div>
+</section>

@@ -1,0 +1,12 @@
+name = "ohm"
+license = "MIT"
+licenselink = ""
+description = "OHM custom theme — cartographic / surveyor register for Open History Map."
+homepage = "https://openhistorymap.org/"
+tags = ["cartographic", "editorial", "humanities"]
+features = ["light-dark", "self-hosted-friendly"]
+min_version = "0.110.0"
+
+[author]
+  name = "Open History Map"
+  homepage = "https://openhistorymap.org/"

@@ -1,11 +1,22 @@
-baseURL = "https://openhistorymap.github.io/"
+baseURL = "https://www.openhistorymap.org/"
 languageCode = "en-us"
 title = "Open History Map"
-theme = "ananke"
+theme = "ohm"
 toc = true
 sectionPagesMenu = "main"
 
-googleAnalytics = "UA-104661756-3"
+# Matomo handles analytics (see themes/ohm/layouts/partials/analytics.html).
+# googleAnalytics intentionally removed.
+
+[params]
+  description = "An open-source web GIS for archaeology and the digital humanities. Made in Bologna by archaeologists and developers since 2015."
+  tagline = "The Digital Map of the Past"
+  github = "https://github.com/openhistorymap"
+  facebook = "https://www.facebook.com/openhistorymap"
+  twitter = "https://twitter.com/ohm_open"
+  youtube = "https://www.youtube.com/channel/UCsyTVfrwSdCIj9MYjkn6pFg"
+  mainSections = ["conference", "paper"]
+  recent_posts_number = 6
 
 [menu]
   [[menu.main]]
@@ -38,24 +49,3 @@ googleAnalytics = "UA-104661756-3"
     title = "Help us"
     url = "/help"
     weight = 1104
-  
-
-    
-    
-
-[params]
-  site_logo = "/LogoKAINUA-1536x769.png"
-  facebook = "https://www.facebook.com/openhistorymap"
-  twitter = "https://twitter.com/ohm_open"
-  youtube = "https://www.youtube.com/channel/UCsyTVfrwSdCIj9MYjkn6pFg"
-  github = "https://github.com/openhistorymap"
-  gitlab = ""
-  linkedin = ""
-  mastodon = ""
-  slack = ""
-  stackoverflow = ""
-  rss = ""
-  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-gray"
-  cover_dimming_class = "bg-black-60"
-  recent_posts_number = 5
