@@ -1,6 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open History Map</title><link>https://www.openhistorymap.org/</link><description>Recent content on Open History Map</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 07 Mar 2025 09:30:00 +0200</lastBuildDate><atom:link href="https://www.openhistorymap.org/index.xml" rel="self" type="application/rss+xml"/><item><title>CAST 2025 - Firenze</title><link>https://www.openhistorymap.org/conference/cast25/</link><pubDate>Fri, 07 Mar 2025 09:30:00 +0200</pubDate><guid>https://www.openhistorymap.org/conference/cast25/</guid><description>&lt;ul&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open History Map</title><link>https://www.openhistorymap.org/</link><description>Recent content on Open History Map</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.openhistorymap.org/index.xml" rel="self" type="application/rss+xml"/><item><title>HTFS — Historical Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HTFS is the equivalent draft
+for &lt;em&gt;historical&lt;/em&gt; ones, where every line, stop and schedule comes with an
+explicit time-of-validity so a network can be reconstructed for any
+chosen date.&lt;/p&gt;
+&lt;p&gt;The repository is archived but the design is the basis for ongoing work
+on transit layers inside OHM, and the spec is the right starting point
+for anyone modelling historical mobility data.&lt;/p&gt;</description></item><item><title>Map Styles</title><link>https://www.openhistorymap.org/tools/mapstyles/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/mapstyles/</guid><description>&lt;p&gt;A small repository of MapLibre / Mapbox-style JSON definitions used to
+render the OHM tile layers. Useful if you want to embed an OHM map in
+your own site, or fork a style as a starting point for a custom
+historical cartography.&lt;/p&gt;</description></item><item><title>OHM Map</title><link>https://www.openhistorymap.org/tools/ohm-map/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-map/</guid><description>&lt;p&gt;The OHM web client is the canonical entry point to the project&amp;rsquo;s data:
+a MapLibre-based interface that lets you pan and zoom across geography
+&lt;em&gt;and&lt;/em&gt; across time, switching between historical layers, base maps and
+thematic overlays.&lt;/p&gt;
+&lt;p&gt;It is the public face of the platform; the rest of the stack on this page
+exists either to feed it data, or to extend the workflow around it.&lt;/p&gt;</description></item><item><title>OHM Zotero Plugin</title><link>https://www.openhistorymap.org/tools/ohm-zotero/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-zotero/</guid><description>&lt;p&gt;The OHM data pipeline is rooted in Zotero: each source — a paper, a map,
+a chronicle, a dataset — lives as a Zotero item, and OHM-specific
+metadata is carried as &lt;code&gt;ohm:*&lt;/code&gt; tags on that item.&lt;/p&gt;
+&lt;p&gt;This plugin adds dedicated UI for editing those descriptors, so curators
+can work directly in Zotero rather than maintaining a parallel spreadsheet.
+Pair it with the Chrome extension below to capture sources from the web.&lt;/p&gt;</description></item><item><title>Tiles API</title><link>https://www.openhistorymap.org/tools/tiles-api/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/tiles-api/</guid><description>&lt;p&gt;The tiles API is the server that backs the map. Standard XYZ tile servers
+key tiles by &lt;code&gt;(z, x, y)&lt;/code&gt;; OHM data also has a temporal axis, so the API
+adds time-window filtering and per-layer grouping on top of the usual
+spatial pyramid.&lt;/p&gt;
+&lt;p&gt;It is the longest-running piece of OHM-specific infrastructure and
+underpins every map view we publish.&lt;/p&gt;</description></item><item><title>OHM Zotero Chrome Extension</title><link>https://www.openhistorymap.org/tools/ohm-zotero-chrome/</link><pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-zotero-chrome/</guid><description>&lt;p&gt;A small Chrome extension that lives next to the Zotero Connector and
+fills a specific gap: attaching arbitrary web pages as &lt;em&gt;linked&lt;/em&gt; URL
+attachments to an item that already exists in your library.&lt;/p&gt;
+&lt;p&gt;Used together with the OHM Zotero plugin, it turns the everyday research
+browser into a one-click pipeline for enriching OHM source records.&lt;/p&gt;</description></item><item><title>Geocontext Front-End</title><link>https://www.openhistorymap.org/tools/geocontext-front/</link><pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/geocontext-front/</guid><description>&lt;p&gt;The companion to the QGIS plugin: a static front-end that reads a
+&lt;code&gt;gcx.json&lt;/code&gt; manifest and renders the referenced GeoJSON datasets on an
+interactive map.&lt;/p&gt;
+&lt;p&gt;It is designed to be hosted alongside the bundle itself — drop the
+front-end and a Geocontext repository on the same host (or on GitHub
+Pages) and the bundle becomes a self-contained, shareable atlas.&lt;/p&gt;</description></item><item><title>Geocontext QGIS Plugin</title><link>https://www.openhistorymap.org/tools/geocontext-qgis/</link><pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/geocontext-qgis/</guid><description>&lt;p&gt;A QGIS plugin aimed at researchers who already work in QGIS and want to
+publish a slice of their project as an open, shareable bundle.&lt;/p&gt;
+&lt;p&gt;The plugin captures the current view — extents, layers and selected
+datasets — and writes them out as a &lt;code&gt;gcx.json&lt;/code&gt; manifest plus
+&lt;code&gt;datasets/*.geojson&lt;/code&gt;, then optionally pushes the result to a GitHub
+repository via the system &lt;code&gt;git&lt;/code&gt;. The matching front-end (see
+&lt;em&gt;Geocontext Front-End&lt;/em&gt;) renders these bundles back to a browser.&lt;/p&gt;</description></item><item><title>CAST 2025 - Firenze</title><link>https://www.openhistorymap.org/conference/cast25/</link><pubDate>Fri, 07 Mar 2025 09:30:00 +0200</pubDate><guid>https://www.openhistorymap.org/conference/cast25/</guid><description>&lt;ul&gt;
 &lt;li&gt;Rivoluzioni Tangibili: Un’esperienza multitavolo ambientata alla vigilia della Rivoluzione Francese - Montanari, Boschetto, Marsicano&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>ArcheoFoss 2024 - Chieti</title><link>https://www.openhistorymap.org/conference/archeofoss24/</link><pubDate>Thu, 19 Dec 2024 09:30:00 +0200</pubDate><guid>https://www.openhistorymap.org/conference/archeofoss24/</guid><description>&lt;ul&gt;
+&lt;/ul&gt;</description></item><item><title>Historical Street View API</title><link>https://www.openhistorymap.org/tools/hsv-api/</link><pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/hsv-api/</guid><description>&lt;p&gt;Photography only goes back to the late 18th century, but humans have
+been making located views of the world for far longer. The Historical
+Street View project collects those views and lets you walk through them
+on a map, choosing both &lt;em&gt;where&lt;/em&gt; and &lt;em&gt;when&lt;/em&gt; you stand.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hsv-api&lt;/code&gt; is the back-end that serves those located views;
+&lt;a href="https://visions.ofthepast.org"&gt;visions.ofthepast.org&lt;/a&gt; is the public
+front-end built on top of it.&lt;/p&gt;</description></item><item><title>ArcheoFoss 2024 - Chieti</title><link>https://www.openhistorymap.org/conference/archeofoss24/</link><pubDate>Thu, 19 Dec 2024 09:30:00 +0200</pubDate><guid>https://www.openhistorymap.org/conference/archeofoss24/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Panel&lt;/strong&gt;: GIS technologies and complex simulative reconstructions and model validation - Moderato, Montanari&lt;/li&gt;
 &lt;li&gt;Strade, cave e teatri: limiti e prospettive nell’applicazione di modelli simulativi ad agenti per la costruzione dei teatri romani - Marsicano, Montanari&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Panel&lt;/strong&gt;: Digital and physical gamiﬁcation for public archaeology experience - Montanari&lt;/li&gt;
