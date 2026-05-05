@@ -1,5 +1,9 @@
 {{- /* Typographic-only header for pages without a featured image. */ -}}
-{{- $hasMeta := or (and .Date (not .Date.IsZero)) .Params.author .Params.address .Params.doi .Params.slides .Params.video -}}
+{{- $hasMeta := or
+    (and .Date (not .Date.IsZero))
+    .Params.author .Params.address .Params.doi .Params.slides .Params.video
+    .Params.repo .Params.homepage .Params.download
+    .Params.category .Params.language .Params.status -}}
 <header class="article-head">
   <h1 class="article-head__title">{{ .Title }}</h1>
   {{- with .Params.description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
@@ -16,6 +20,14 @@
     {{- with .Params.doi }}<div><dt>DOI</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://(dx\\.)?doi\\.org/" "" }}</a></dd></div>{{ end }}
     {{- with .Params.slides }}<div><dt>Slides</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://" "" | truncate 40 }}</a></dd></div>{{ end }}
     {{- with .Params.video }}<div><dt>Video</dt><dd><a href="https://www.youtube.com/watch?v={{ . }}" rel="noopener">YouTube</a></dd></div>{{ end }}
+
+    {{- /* Tool-specific fields. */ -}}
+    {{- with .Params.category }}<div><dt>Kind</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with .Params.language }}<div><dt>Language</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with .Params.status }}<div><dt>Status</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with .Params.repo }}<div><dt>Source</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://(www\\.)?" "" }}</a></dd></div>{{ end }}
+    {{- with .Params.homepage }}<div><dt>Live</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://(www\\.)?" "" | replaceRE "/$" "" }}</a></dd></div>{{ end }}
+    {{- with .Params.download }}<div><dt>Download</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://(www\\.)?" "" | truncate 48 }}</a></dd></div>{{ end }}
   </dl>
   {{- end }}
 </header>

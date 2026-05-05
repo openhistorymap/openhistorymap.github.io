@@ -5,6 +5,11 @@ theme = "ohm"
 toc = true
 sectionPagesMenu = "main"
 
+# No taxonomies in use — `category` on tools/* is a tool-specific frontmatter
+# field, not the Hugo `categories` taxonomy. Suppress the empty default pages.
+disableKinds = ["taxonomy", "term"]
+[taxonomies]
+
 # Matomo handles analytics (see themes/ohm/layouts/partials/analytics.html).
 # googleAnalytics intentionally removed.
 
@@ -37,6 +42,12 @@ sectionPagesMenu = "main"
     title = "The Blog"
     url = "https://blog.openhistorymap.org/"
     weight = -105
+  [[menu.main]]
+    identifier = "tools"
+    name = "Tools"
+    title = "Tools"
+    url = "/tools"
+    weight = -103
   [[menu.main]]
     identifier = "about"
     name = "About"

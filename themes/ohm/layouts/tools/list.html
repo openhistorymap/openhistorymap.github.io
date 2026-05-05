@@ -1,0 +1,45 @@
+{{ define "main" }}
+  <div class="span-content">
+    {{ partial "meta-strip.html" . }}
+
+    <header class="article-head">
+      <h1 class="article-head__title">{{ .Title | default "Tools" }}</h1>
+      {{- with .Description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
+      {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+    </header>
+
+    {{- $pages := .RegularPages -}}
+    {{- if $pages }}
+      <h2 class="section-rule"><span>{{ len $pages }} tools</span></h2>
+      <ul class="tools" role="list">
+        {{- range $pages.ByTitle }}
+          {{- $plateNo := substr (md5 .Permalink) 0 4 | upper -}}
+          <li class="tool">
+            <div class="tool__plate-no">№.{{ $plateNo }}</div>
+            <div class="tool__body">
+              <h3 class="tool__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <ul class="tool__badges" role="list">
+                {{- with .Params.category }}<li class="tool__badge">{{ . }}</li>{{ end }}
+                {{- with .Params.language }}<li class="tool__badge tool__badge--lang">{{ . }}</li>{{ end }}
+                {{- with .Params.status }}<li class="tool__badge tool__badge--status tool__badge--{{ . | urlize }}">{{ . }}</li>{{ end }}
+              </ul>
+              {{- if .Description }}<p class="tool__excerpt">{{ .Description }}</p>
+              {{- else if .Summary }}<p class="tool__excerpt">{{ .Summary | plainify | truncate 200 }}</p>
+              {{- end }}
+              <div class="tool__links">
+                {{- with .Params.repo }}<a href="{{ . }}" rel="noopener">Source ↗</a>{{ end }}
+                {{- with .Params.homepage }}<a href="{{ . }}" rel="noopener">Live ↗</a>{{ end }}
+                {{- with .Params.download }}<a href="{{ . }}" rel="noopener">Download ↗</a>{{ end }}
+                <a href="{{ .RelPermalink }}">Read more →</a>
+              </div>
+            </div>
+          </li>
+        {{- end }}
+      </ul>
+    {{- else }}
+      <p class="prose" style="color: var(--ink-muted)">
+        Nothing here yet.
+      </p>
+    {{- end }}
+  </div>
+{{ end }}
