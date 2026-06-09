@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open History Map</title><link>https://www.openhistorymap.org/</link><description>Recent content on Open History Map</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.openhistorymap.org/index.xml" rel="self" type="application/rss+xml"/><item><title>HTFS — Historical Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HTFS is the equivalent draft
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Open History Map</title><link>https://www.openhistorymap.org/</link><description>Recent content on Open History Map</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.openhistorymap.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Open Culture Map</title><link>https://www.openhistorymap.org/explorations/open-culture-map/</link><pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/open-culture-map/</guid><description>&lt;p&gt;A continent-wide map of cultural heritage: museums, archaeological sites,
+monuments and artworks pulled from OpenStreetMap and enriched with the
+identifiers, descriptions and links that Wikidata carries for each one.&lt;/p&gt;
+&lt;p&gt;Like its sibling editions it refreshes weekly, so the picture keeps pace with
+the open datasets underneath it. See also
+&lt;a href="https://www.openhistorymap.org/explorations/open-wine-map/"&gt;Open Wine Map&lt;/a&gt; and
+&lt;a href="https://www.openhistorymap.org/explorations/open-art-map/"&gt;Open Art Map&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Open Wine Map</title><link>https://www.openhistorymap.org/explorations/open-wine-map/</link><pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/open-wine-map/</guid><description>&lt;p&gt;A living atlas of wine: every winery and vineyard that OpenStreetMap records,
+set against the regions and appellations described in Wikidata, so you can see
+both the individual estates and the named territories they sit inside.&lt;/p&gt;
+&lt;p&gt;The whole map rebuilds itself weekly, so it tracks the open data as it grows
+rather than freezing a single snapshot. It is one of the present-day,
+OSM-plus-Wikidata editions alongside
+&lt;a href="https://www.openhistorymap.org/explorations/open-culture-map/"&gt;Open Culture Map&lt;/a&gt; and
+&lt;a href="https://www.openhistorymap.org/explorations/open-art-map/"&gt;Open Art Map&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Ideas of Ancient Rome</title><link>https://www.openhistorymap.org/explorations/ideas-of-ancient-rome/</link><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/ideas-of-ancient-rome/</guid><description>&lt;p&gt;Rome is usually told through its rulers and its wars. This edition tells it
+through its &lt;em&gt;minds&lt;/em&gt;: the engineers, jurists, poets and philosophers, and the
+inventions and ideas they left behind — concrete and aqueducts, law and
+calendar, rhetoric and road.&lt;/p&gt;
+&lt;p&gt;Laid out as a single timeline from the traditional founding of the city in
+753 BC to the fall of the West in AD 476, and built on Wikidata and Wikipedia.
+It is the conceptual companion to the
+&lt;a href="https://www.openhistorymap.org/explorations/rulers-of-ancient-rome/"&gt;Rulers of Ancient Rome&lt;/a&gt; gallery.&lt;/p&gt;</description></item><item><title>Rulers of Ancient Egypt</title><link>https://www.openhistorymap.org/explorations/rulers-of-ancient-egypt/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/rulers-of-ancient-egypt/</guid><description>&lt;p&gt;The pharaohs, dynasty by dynasty: from Narmer and the unification of the Two
+Lands through the Old, Middle and New Kingdoms to Cleopatra VII and the Roman
+annexation of Egypt.&lt;/p&gt;
+&lt;p&gt;Built on Wikipedia and Wikidata, it is the direct sibling of
+&lt;a href="https://www.openhistorymap.org/explorations/rulers-of-ancient-rome/"&gt;Rulers of Ancient Rome&lt;/a&gt; — the same
+portrait-gallery treatment applied to one of the longest continuous lines of
+rulership in recorded history.&lt;/p&gt;</description></item><item><title>Rulers of Ancient Rome</title><link>https://www.openhistorymap.org/explorations/rulers-of-ancient-rome/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/rulers-of-ancient-rome/</guid><description>&lt;p&gt;A portrait gallery of those who held power over Rome across its whole span:
+the legendary kings, the consuls of the Republic, and the emperors down to the
+deposition of Romulus Augustulus in AD 476.&lt;/p&gt;
+&lt;p&gt;Each figure is drawn from Wikipedia and Wikidata, with portraits, dates and
+the line of succession laid out as a single continuous sequence. It is the
+Roman cut of the broader &lt;a href="https://www.openhistorymap.org/explorations/rulers-of-the-past/"&gt;Rulers of the Past&lt;/a&gt;
+atlas, and a sibling to
+&lt;a href="https://www.openhistorymap.org/explorations/rulers-of-ancient-egypt/"&gt;Rulers of Ancient Egypt&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Rulers of the Past</title><link>https://www.openhistorymap.org/explorations/rulers-of-the-past/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/rulers-of-the-past/</guid><description>&lt;p&gt;Most lists of rulers run &lt;em&gt;down&lt;/em&gt; a single throne. This one runs &lt;em&gt;across&lt;/em&gt;: pick a
+year and see who was in power everywhere at once — the emperor in Rome, the
+dynasty in China, the king in a European fragment — laid side by side on one
+synchronic timeline.&lt;/p&gt;
+&lt;p&gt;It is assembled from Wikipedia and Wikidata and covers antiquity through the
+18th century. The same engine drives the focused sibling editions for
+&lt;a href="https://www.openhistorymap.org/explorations/rulers-of-ancient-rome/"&gt;Ancient Rome&lt;/a&gt; and
+&lt;a href="https://www.openhistorymap.org/explorations/rulers-of-ancient-egypt/"&gt;Ancient Egypt&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Map of the First World War</title><link>https://www.openhistorymap.org/explorations/map-of-the-first-world-war/</link><pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/map-of-the-first-world-war/</guid><description>&lt;p&gt;The Great War rendered day by day: move along the timeline and watch the
+fronts shift, the battles open and close, and the bombing runs fall, each
+event placed in space and pinned to its date.&lt;/p&gt;
+&lt;p&gt;It draws on the THOR bombing dataset, Wikidata for the events and actors, and
+OpenStreetMap for the underlying geography. It is the elder of the two war
+atlases — see also
+&lt;a href="https://www.openhistorymap.org/explorations/map-of-the-second-world-war/"&gt;Map of the Second World War&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Map of the Second World War</title><link>https://www.openhistorymap.org/explorations/map-of-the-second-world-war/</link><pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/map-of-the-second-world-war/</guid><description>&lt;p&gt;The same day-by-day treatment applied to the Second World War: the war&amp;rsquo;s reach
+unfolding across the timeline, with the THOR dataset — the US Department of
+Defense&amp;rsquo;s record of aerial bombardment — supplying the operational detail and
+Wikidata and OpenStreetMap supplying the events and the ground beneath them.&lt;/p&gt;
+&lt;p&gt;It is the newer of the pair and still settling in; the
+&lt;a href="https://www.openhistorymap.org/explorations/map-of-the-first-world-war/"&gt;Map of the First World War&lt;/a&gt; is the
+more finished sibling.&lt;/p&gt;</description></item><item><title>GeoContext Editor</title><link>https://www.openhistorymap.org/tools/geocontext-app/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/geocontext-app/</guid><description>&lt;p&gt;A standalone desktop application — built with Tauri v2 and SvelteKit — for
+working on Geocontext repositories directly, following the same &lt;code&gt;FORMAT.md&lt;/code&gt; as
+the &lt;a href="https://www.openhistorymap.org/tools/geocontext-front/"&gt;Geocontext Front-End&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Where the QGIS plugin captures a bundle from an existing GIS project and the
+web front-end renders one for readers, the editor sits in between: open a
+&lt;code&gt;gcx.json&lt;/code&gt;, edit its manifest and datasets, and commit the result — no QGIS
+session required.&lt;/p&gt;</description></item><item><title>Harris MCP</title><link>https://www.openhistorymap.org/tools/harris-mcp/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/harris-mcp/</guid><description>&lt;p&gt;The Harris matrix is how archaeologists record stratigraphy: the ordered
+relationships between the layers and cuts of an excavation. &lt;code&gt;harris-mcp&lt;/code&gt;
+exposes those matrices to LLM agents through the Model Context Protocol, with
+adapters for the common interchange formats — HMDP, CSV, XLSX and HMC/HMCX.&lt;/p&gt;
+&lt;p&gt;The read surface is tuned for language models; the write surface is
+changelog-backed, so every edit an agent makes is auditable and reversible.
+Corpus-level tools let it reason across a whole set of documents at once.&lt;/p&gt;</description></item><item><title>Index API</title><link>https://www.openhistorymap.org/tools/ohm-index-api/</link><pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-index-api/</guid><description>&lt;p&gt;OHM&amp;rsquo;s sources live in Zotero, tagged with &lt;code&gt;ohm:*&lt;/code&gt; descriptors by the
+&lt;a href="https://www.openhistorymap.org/tools/ohm-zotero/"&gt;Zotero plugin&lt;/a&gt;. This API is what turns that library into
+a public, queryable index: it connects to Zotero, reads the curated items and
+their descriptors, and serves them as the searchable catalogue behind
+&lt;code&gt;index.openhistorymap.org&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pair it with the &lt;a href="https://www.openhistorymap.org/tools/ohm-index-front/"&gt;Index Front-End&lt;/a&gt; for the browser
+side of the same service.&lt;/p&gt;</description></item><item><title>Index Front-End</title><link>https://www.openhistorymap.org/tools/ohm-index-front/</link><pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-index-front/</guid><description>&lt;p&gt;The reading side of the data index: a browser interface for searching the
+sources, datasets and &lt;code&gt;ohm:*&lt;/code&gt; descriptors that the
+&lt;a href="https://www.openhistorymap.org/tools/ohm-index-api/"&gt;Index API&lt;/a&gt; serves.&lt;/p&gt;
+&lt;p&gt;It is where a researcher goes to ask &lt;em&gt;what does OHM know about this place,
+this period, this theme&lt;/em&gt; — and to trace any answer back to the Zotero item it
+came from.&lt;/p&gt;</description></item><item><title>Archaeo Pro</title><link>https://www.openhistorymap.org/tools/archaeo-pro/</link><pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/archaeo-pro/</guid><description>&lt;p&gt;A tool for the paperwork that surrounds Italian &lt;em&gt;sorveglianze archeologiche&lt;/em&gt; —
+the archaeological surveillance carried out alongside construction work. It is
+a field-first progressive web app: record observations on site, including
+offline, then turn them into the required DOCX/PDF reports.&lt;/p&gt;
+&lt;p&gt;The same records can be exported to Open History Map, so surveillance
+fieldwork feeds the wider dataset rather than ending in a filing cabinet. A
+FastAPI + PostGIS back-end handles storage and the spatial side.&lt;/p&gt;</description></item><item><title>Open Art Map</title><link>https://www.openhistorymap.org/explorations/open-art-map/</link><pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/open-art-map/</guid><description>&lt;p&gt;An atlas built around three places in every artist&amp;rsquo;s life: where they were
+born, where they died, and where their work hangs today. Tracing those points
+turns the history of art into a geography — movements migrating, careers
+crossing borders, collections gathering far from where they were made.&lt;/p&gt;
+&lt;p&gt;Assembled from Wikidata for the people and the works and OpenStreetMap for the
+institutions that hold them, and refreshed monthly. A companion to
+&lt;a href="https://www.openhistorymap.org/explorations/open-culture-map/"&gt;Open Culture Map&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Tiles API (Rust)</title><link>https://www.openhistorymap.org/tools/tileserver-rust/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/tileserver-rust/</guid><description>&lt;p&gt;A reimplementation of the &lt;a href="https://www.openhistorymap.org/tools/tiles-api/"&gt;Tiles API&lt;/a&gt; in Rust: same
+time-, space- and layer-aware vector tiles, served read-only through &lt;code&gt;axum&lt;/code&gt;
+over a &lt;code&gt;deadpool-postgres&lt;/code&gt; connection pool, emitting standard MVT.&lt;/p&gt;
+&lt;p&gt;The goal is the same contract as the Python server at a lower resource cost —
+a drop-in tile back-end for high-traffic or constrained deployments. It is the
+newer of the two and still being hardened against the original.&lt;/p&gt;</description></item><item><title>Tiles Archive</title><link>https://www.openhistorymap.org/tools/tiles-archive/</link><pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/tiles-archive/</guid><description>&lt;p&gt;The live &lt;a href="https://www.openhistorymap.org/tools/tiles-api/"&gt;Tiles API&lt;/a&gt; generates tiles on demand; this tool
+bakes them. It slices the data by time partition, writes each slice out as a
+single-file PMTiles archive, and publishes the result to Cloudflare R2.&lt;/p&gt;
+&lt;p&gt;The payoff is static hosting: a PMTiles file on object storage serves a whole
+time window straight to the client, no tile server in the loop — cheaper to
+run and trivial to cache or mirror.&lt;/p&gt;</description></item><item><title>HTFS — Historical Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HTFS is the equivalent draft
 for &lt;em&gt;historical&lt;/em&gt; ones, where every line, stop and schedule comes with an
 explicit time-of-validity so a network can be reconstructed for any
 chosen date.&lt;/p&gt;
@@ -45,7 +142,12 @@ Street View project collects those views and lets you walk through them
 on a map, choosing both &lt;em&gt;where&lt;/em&gt; and &lt;em&gt;when&lt;/em&gt; you stand.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;hsv-api&lt;/code&gt; is the back-end that serves those located views;
 &lt;a href="https://visions.ofthepast.org"&gt;visions.ofthepast.org&lt;/a&gt; is the public
-front-end built on top of it.&lt;/p&gt;</description></item><item><title>ArcheoFoss 2024 - Chieti</title><link>https://www.openhistorymap.org/conference/archeofoss24/</link><pubDate>Thu, 19 Dec 2024 09:30:00 +0200</pubDate><guid>https://www.openhistorymap.org/conference/archeofoss24/</guid><description>&lt;ul&gt;
+front-end built on top of it.&lt;/p&gt;</description></item><item><title>Visions of the Past</title><link>https://www.openhistorymap.org/explorations/visions-of-the-past/</link><pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/explorations/visions-of-the-past/</guid><description>&lt;p&gt;Photography reaches back only to the late 18th century, but people have been
+making located views of the world for far longer. Visions of the Past gathers
+those views — photographs, paintings, engravings — and lets you walk among
+them on a map, choosing both &lt;em&gt;where&lt;/em&gt; you stand and &lt;em&gt;when&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It is the public face of the Historical Street View project; the back-end that
+serves the located views, &lt;a href="https://www.openhistorymap.org/tools/"&gt;&lt;code&gt;hsv-api&lt;/code&gt;&lt;/a&gt;, is listed under Tools.&lt;/p&gt;</description></item><item><title>ArcheoFoss 2024 - Chieti</title><link>https://www.openhistorymap.org/conference/archeofoss24/</link><pubDate>Thu, 19 Dec 2024 09:30:00 +0200</pubDate><guid>https://www.openhistorymap.org/conference/archeofoss24/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Panel&lt;/strong&gt;: GIS technologies and complex simulative reconstructions and model validation - Moderato, Montanari&lt;/li&gt;
 &lt;li&gt;Strade, cave e teatri: limiti e prospettive nell’applicazione di modelli simulativi ad agenti per la costruzione dei teatri romani - Marsicano, Montanari&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Panel&lt;/strong&gt;: Digital and physical gamiﬁcation for public archaeology experience - Montanari&lt;/li&gt;
@@ -77,8 +179,8 @@ front-end built on top of it.&lt;/p&gt;</description></item><item><title>ArcheoF
 &lt;li&gt;&lt;strong&gt;Open History Map&lt;/strong&gt; - Contextualizing in the past with modern tools&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Presentation of Arena Colossei</title><link>https://www.openhistorymap.org/event/arena_colossei/</link><pubDate>Wed, 21 Apr 2021 21:00:00 +0200</pubDate><guid>https://www.openhistorymap.org/event/arena_colossei/</guid><description>&lt;p&gt;Event organized with &lt;a href="https://www.justplaybologna.it"&gt;Just Play Bologna&lt;/a&gt; and &lt;a href="https://tophat.games/"&gt;Top Hat Games&lt;/a&gt; explaining the historical and archaeological reasons and origins for the boardgame Arena Colossei&lt;/p&gt;
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"&gt;
- &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uayIG2PTN3g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
- &lt;/div&gt;</description></item><item><title>ItWikiCon 2020 - Online</title><link>https://www.openhistorymap.org/conference/itwikicon_2020_online/</link><pubDate>Sun, 04 Oct 2020 22:31:44 +0200</pubDate><guid>https://www.openhistorymap.org/conference/itwikicon_2020_online/</guid><description/></item><item><title>NUME 2020 - Online</title><link>https://www.openhistorymap.org/conference/nume2020_online/</link><pubDate>Mon, 08 Jun 2020 12:26:22 +0200</pubDate><guid>https://www.openhistorymap.org/conference/nume2020_online/</guid><description>&lt;ul&gt;
+			&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uayIG2PTN3g?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"&gt;&lt;/iframe&gt;
+		&lt;/div&gt;</description></item><item><title>ItWikiCon 2020 - Online</title><link>https://www.openhistorymap.org/conference/itwikicon_2020_online/</link><pubDate>Sun, 04 Oct 2020 22:31:44 +0200</pubDate><guid>https://www.openhistorymap.org/conference/itwikicon_2020_online/</guid><description/></item><item><title>NUME 2020 - Online</title><link>https://www.openhistorymap.org/conference/nume2020_online/</link><pubDate>Mon, 08 Jun 2020 12:26:22 +0200</pubDate><guid>https://www.openhistorymap.org/conference/nume2020_online/</guid><description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Bologna 1115&lt;/strong&gt; – Behind the Scenes (presentation) (IT)&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Participatory Models in Archaeology: Wiki and Open Access Platforms</title><link>https://www.openhistorymap.org/paper/archeofoss19/</link><pubDate>Thu, 12 Sep 2019 12:25:26 +0200</pubDate><guid>https://www.openhistorymap.org/paper/archeofoss19/</guid><description>&lt;p&gt;Abstract:
 The paper proposed herein presents three events organized in 2018 and tries to find a common thread through these experiences. Two of these events were organized thanks to the collaboration between Trentino Alto Adige Wiki and Arc-Team, while the third was conceived and organized by Open History Map, an association based in Bologna. The three events deal with very different topics but have in common the close collaboration between the public, Wikimedia volunteers and researchers.&lt;/p&gt;</description></item><item><title>GFossIT/ArcheoFoss 2019 - Padova</title><link>https://www.openhistorymap.org/conference/gfossit_archeofoss_2019_padova/</link><pubDate>Wed, 20 Feb 2019 12:27:06 +0200</pubDate><guid>https://www.openhistorymap.org/conference/gfossit_archeofoss_2019_padova/</guid><description>&lt;ul&gt;

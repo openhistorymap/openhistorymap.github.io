@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Open History Map</title><link>https://www.openhistorymap.org/tools/</link><description>Recent content in Tools on Open History Map</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.openhistorymap.org/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>HTFS — Historical Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HTFS is the equivalent draft
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Open History Map</title><link>https://www.openhistorymap.org/tools/</link><description>Recent content in Tools on Open History Map</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.openhistorymap.org/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>GeoContext Editor</title><link>https://www.openhistorymap.org/tools/geocontext-app/</link><pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/geocontext-app/</guid><description>&lt;p&gt;A standalone desktop application — built with Tauri v2 and SvelteKit — for
+working on Geocontext repositories directly, following the same &lt;code&gt;FORMAT.md&lt;/code&gt; as
+the &lt;a href="https://www.openhistorymap.org/tools/geocontext-front/"&gt;Geocontext Front-End&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Where the QGIS plugin captures a bundle from an existing GIS project and the
+web front-end renders one for readers, the editor sits in between: open a
+&lt;code&gt;gcx.json&lt;/code&gt;, edit its manifest and datasets, and commit the result — no QGIS
+session required.&lt;/p&gt;</description></item><item><title>Harris MCP</title><link>https://www.openhistorymap.org/tools/harris-mcp/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/harris-mcp/</guid><description>&lt;p&gt;The Harris matrix is how archaeologists record stratigraphy: the ordered
+relationships between the layers and cuts of an excavation. &lt;code&gt;harris-mcp&lt;/code&gt;
+exposes those matrices to LLM agents through the Model Context Protocol, with
+adapters for the common interchange formats — HMDP, CSV, XLSX and HMC/HMCX.&lt;/p&gt;
+&lt;p&gt;The read surface is tuned for language models; the write surface is
+changelog-backed, so every edit an agent makes is auditable and reversible.
+Corpus-level tools let it reason across a whole set of documents at once.&lt;/p&gt;</description></item><item><title>Index API</title><link>https://www.openhistorymap.org/tools/ohm-index-api/</link><pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-index-api/</guid><description>&lt;p&gt;OHM&amp;rsquo;s sources live in Zotero, tagged with &lt;code&gt;ohm:*&lt;/code&gt; descriptors by the
+&lt;a href="https://www.openhistorymap.org/tools/ohm-zotero/"&gt;Zotero plugin&lt;/a&gt;. This API is what turns that library into
+a public, queryable index: it connects to Zotero, reads the curated items and
+their descriptors, and serves them as the searchable catalogue behind
+&lt;code&gt;index.openhistorymap.org&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pair it with the &lt;a href="https://www.openhistorymap.org/tools/ohm-index-front/"&gt;Index Front-End&lt;/a&gt; for the browser
+side of the same service.&lt;/p&gt;</description></item><item><title>Index Front-End</title><link>https://www.openhistorymap.org/tools/ohm-index-front/</link><pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-index-front/</guid><description>&lt;p&gt;The reading side of the data index: a browser interface for searching the
+sources, datasets and &lt;code&gt;ohm:*&lt;/code&gt; descriptors that the
+&lt;a href="https://www.openhistorymap.org/tools/ohm-index-api/"&gt;Index API&lt;/a&gt; serves.&lt;/p&gt;
+&lt;p&gt;It is where a researcher goes to ask &lt;em&gt;what does OHM know about this place,
+this period, this theme&lt;/em&gt; — and to trace any answer back to the Zotero item it
+came from.&lt;/p&gt;</description></item><item><title>Archaeo Pro</title><link>https://www.openhistorymap.org/tools/archaeo-pro/</link><pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/archaeo-pro/</guid><description>&lt;p&gt;A tool for the paperwork that surrounds Italian &lt;em&gt;sorveglianze archeologiche&lt;/em&gt; —
+the archaeological surveillance carried out alongside construction work. It is
+a field-first progressive web app: record observations on site, including
+offline, then turn them into the required DOCX/PDF reports.&lt;/p&gt;
+&lt;p&gt;The same records can be exported to Open History Map, so surveillance
+fieldwork feeds the wider dataset rather than ending in a filing cabinet. A
+FastAPI + PostGIS back-end handles storage and the spatial side.&lt;/p&gt;</description></item><item><title>Tiles API (Rust)</title><link>https://www.openhistorymap.org/tools/tileserver-rust/</link><pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/tileserver-rust/</guid><description>&lt;p&gt;A reimplementation of the &lt;a href="https://www.openhistorymap.org/tools/tiles-api/"&gt;Tiles API&lt;/a&gt; in Rust: same
+time-, space- and layer-aware vector tiles, served read-only through &lt;code&gt;axum&lt;/code&gt;
+over a &lt;code&gt;deadpool-postgres&lt;/code&gt; connection pool, emitting standard MVT.&lt;/p&gt;
+&lt;p&gt;The goal is the same contract as the Python server at a lower resource cost —
+a drop-in tile back-end for high-traffic or constrained deployments. It is the
+newer of the two and still being hardened against the original.&lt;/p&gt;</description></item><item><title>Tiles Archive</title><link>https://www.openhistorymap.org/tools/tiles-archive/</link><pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/tiles-archive/</guid><description>&lt;p&gt;The live &lt;a href="https://www.openhistorymap.org/tools/tiles-api/"&gt;Tiles API&lt;/a&gt; generates tiles on demand; this tool
+bakes them. It slices the data by time partition, writes each slice out as a
+single-file PMTiles archive, and publishes the result to Cloudflare R2.&lt;/p&gt;
+&lt;p&gt;The payoff is static hosting: a PMTiles file on object storage serves a whole
+time window straight to the client, no tile server in the loop — cheaper to
+run and trivial to cache or mirror.&lt;/p&gt;</description></item><item><title>HTFS — Historical Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HTFS is the equivalent draft
 for &lt;em&gt;historical&lt;/em&gt; ones, where every line, stop and schedule comes with an
 explicit time-of-validity so a network can be reconstructed for any
 chosen date.&lt;/p&gt;
