@@ -3,7 +3,8 @@
     (and .Date (not .Date.IsZero))
     .Params.author .Params.address .Params.doi .Params.slides .Params.video
     .Params.repo .Params.homepage .Params.download
-    .Params.category .Params.language .Params.status -}}
+    .Params.category .Params.language .Params.status
+    .Params.coverage .Params.sources -}}
 <header class="article-head">
   <h1 class="article-head__title">{{ .Title }}</h1>
   {{- with .Params.description }}<p class="article-head__lede">{{ . }}</p>{{ end }}
@@ -23,6 +24,8 @@
 
     {{- /* Tool-specific fields. */ -}}
     {{- with .Params.category }}<div><dt>Kind</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with .Params.coverage }}<div><dt>Coverage</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with .Params.sources }}<div><dt>Sources</dt><dd>{{ delimit . ", " }}</dd></div>{{ end }}
     {{- with .Params.language }}<div><dt>Language</dt><dd>{{ . }}</dd></div>{{ end }}
     {{- with .Params.status }}<div><dt>Status</dt><dd>{{ . }}</dd></div>{{ end }}
     {{- with .Params.repo }}<div><dt>Source</dt><dd><a href="{{ . }}" rel="noopener">{{ . | replaceRE "https?://(www\\.)?" "" }}</a></dd></div>{{ end }}

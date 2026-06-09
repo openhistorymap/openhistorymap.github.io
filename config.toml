@@ -43,6 +43,12 @@ disableKinds = ["taxonomy", "term"]
     url = "https://blog.openhistorymap.org/"
     weight = -105
   [[menu.main]]
+    identifier = "explorations"
+    name = "Explorations"
+    title = "Explorations"
+    url = "/explorations"
+    weight = -104
+  [[menu.main]]
     identifier = "tools"
     name = "Tools"
     title = "Tools"
