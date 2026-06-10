@@ -112,6 +112,7 @@
     min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    overflow-x: clip; /* contain full-bleed breakout bands (e.g. the timechart) */
   }
   /* Light text on dark needs slightly more leading */
   @media (prefers-color-scheme: dark) {
@@ -962,10 +963,16 @@
    ========================================================================= */
 @layer components {
   .timechart {
-    --tc-labelw: clamp(9rem, 24%, 15rem);
+    --tc-labelw: clamp(9rem, 22%, 16rem);
     --tc-row-h: 2.5rem;
     --tc-band-h: 7px;
-    margin: var(--sp-6) 0 var(--sp-12);
+    --tc-max: 120rem;
+    /* Break out of the 78rem page cap to (near) full viewport width, so the
+       depth of time reads at full breadth. Capped on ultra-wide screens and
+       gutter-padded; framed top and bottom as a ruled survey band. */
+    margin: var(--sp-8) calc(50% - 50vw) var(--sp-12);
+    padding: var(--sp-8) max(var(--gutter), calc((100vw - var(--tc-max)) / 2));
+    border-block: 1px solid var(--rule);
   }
 
   .timechart__note {
@@ -1087,6 +1094,40 @@
     box-shadow: 0 0 0 1px color-mix(in oklch, var(--terracotta) 45%, transparent);
   }
 
+  /* PeriodO reference frames — sourced scholarly periods drawn faintly behind
+     an edition's bar. The terracotta bar (z-index 1) reads on top. */
+  .tcrow--periods { min-height: 3.4rem; }
+  .tcrow--periods .tcrow__track { height: 3.4rem; }
+  .tcrow--periods .tcrow__track::after { display: none; }
+  .tcrow__periods {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .tcper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--x);
+    width: var(--w);
+    overflow: hidden;
+    border-left: 1px solid var(--rule);
+  }
+  .tcper:nth-child(even) {
+    background: color-mix(in oklch, var(--ink) 3.5%, transparent);
+  }
+  .tcper__label {
+    display: block;
+    padding: 2px 0 0 var(--sp-1);
+    font-family: var(--font-meta);
+    font-size: 0.6875rem; /* 11px — sub-meta, decorative reference layer */
+    line-height: 1.1;
+    color: var(--ink-muted);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   .tcrow__label {
     display: flex;
     flex-wrap: wrap;
@@ -1194,9 +1235,62 @@
     }
     .tcrow__track { height: 1.4rem; }
     .tcrow__label { padding-left: 0; }
+    /* periods stay as faint strata texture; labels won't fit, so drop them
+       (the detail page carries the full cited list). */
+    .tcrow--periods .tcrow__track { height: 2.2rem; }
+    .tcper__label { display: none; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .tcrow__band { animation: none; }
+  }
+
+  /* ----- detail page: cited periodization (PeriodO authority links) ----- */
+  .periodo { margin-top: var(--sp-12); }
+  .periodo__source {
+    font-size: var(--t-body-sm);
+    color: var(--ink-muted);
+    margin-bottom: var(--sp-4);
+    max-width: var(--measure);
+  }
+  .periodo__list {
+    display: grid;
+    border-top: 1px solid var(--rule-strong);
+    max-width: 52ch;
+  }
+  .periodo__item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--sp-1) var(--sp-4);
+    align-items: baseline;
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .periodo__name {
+    font-weight: var(--w-medium);
+    font-size: var(--t-body);
+  }
+  .periodo__span {
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    color: var(--ink-muted);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .periodo__id {
+    grid-column: 1 / -1;
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    color: var(--ink-muted);
+    text-decoration: none;
+    width: max-content;
+    max-width: 100%;
+    border-bottom: 1px solid var(--rule);
+    transition: color var(--t-fast) var(--ease-out),
+                border-color var(--t-fast) var(--ease-out);
+  }
+  .periodo__id:hover {
+    color: var(--terracotta);
+    border-color: var(--terracotta);
   }
 }

@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <article class="span-content">
+    {{ partial "meta-strip.html" . }}
+
+    {{- if .Params.featured_image -}}
+      {{ partial "plate.html" . }}
+    {{- else -}}
+      {{ partial "article-head.html" . }}
+    {{- end }}
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{- /* Periodization — sourced scholarly periods (PeriodO), shown as cited
+           authority links. Mirrors the faint period frames on the section chart. */ -}}
+    {{- with .Params.periods }}
+      <section class="periodo" aria-labelledby="periodo-h">
+        <h2 id="periodo-h" class="section-rule"><span>Periodization</span></h2>
+        {{- with $.Params.period_source }}
+          <p class="periodo__source">
+            After
+            {{- if $.Params.period_source_url }} <a href="{{ $.Params.period_source_url }}" rel="noopener">{{ . }}</a>{{ else }} {{ . }}{{ end }},
+            indexed by <a href="https://perio.do/" rel="noopener">PeriodO</a>.
+          </p>
+        {{- end }}
+        <ol class="periodo__list" role="list">
+          {{- range . }}
+            <li class="periodo__item">
+              <span class="periodo__name">{{ .full | default .label }}</span>
+              <span class="periodo__span">{{ if lt .from 0 }}{{ mul .from -1 }} BC{{ else }}AD {{ .from }}{{ end }} – {{ if lt .to 0 }}{{ mul .to -1 }} BC{{ else }}AD {{ .to }}{{ end }}</span>
+              <a class="periodo__id" href="https://n2t.net/ark:/99152/{{ .id }}" rel="noopener">ark:/99152/{{ .id }} ↗</a>
+            </li>
+          {{- end }}
+        </ol>
+      </section>
+    {{- end }}
+
+    {{- with .Params.tags -}}
+      <ul class="tag-list">
+        {{- range . -}}
+          <li><a href="{{ "/tags/" | relURL }}{{ . | urlize }}">#{{ . }}</a></li>
+        {{- end -}}
+      </ul>
+    {{- end -}}
+  </article>
+{{ end }}

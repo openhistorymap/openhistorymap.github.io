@@ -7,6 +7,15 @@ coverage: "Romulus → AD 476"
 era_from: -753
 era_to: 476
 ongoing: false
+
+# Periodization drawn behind this edition on the timeline, from PeriodO
+# (perio.do). Each period is a sourced scholarly assertion; the id is its
+# canonical ARK (resolves at https://n2t.net/ark:/99152/<id>).
+period_source: "Epigraphische Datenbank Heidelberg (EDH)"
+period_source_url: "https://edh.ub.uni-heidelberg.de/"
+periods:
+  - { label: "Roman Republic", from: -508, to: -26, id: "p0jrrjb66p3" }
+  - { label: "Roman Empire", from: -26, to: 476, id: "p0jrrjbvfhm" }
 sources: ["Wikipedia", "Wikidata"]
 status: "active"
 homepage: "https://rulers.ofancientrome.org"

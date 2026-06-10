@@ -35,8 +35,10 @@
               aria-label="The editions plotted on a timeline from 3500 BC to the present.">
         <figcaption class="timechart__note">
           Each bar marks the span an edition covers, plotted left-to-right from
-          deep antiquity to today. The four <em>ongoing</em> editions below are
-          live datasets, refreshed on a schedule.
+          deep antiquity to today; where a scholarly periodization exists, its
+          periods are drawn faintly behind the bar, sourced from
+          <a href="https://perio.do/" rel="noopener">PeriodO</a>. The four
+          <em>ongoing</em> editions below are live datasets, refreshed on a schedule.
         </figcaption>
 
         {{- /* Axis: year labels aligned to the plot column. */ -}}
@@ -63,14 +65,26 @@
             {{- range $i, $p := $bounded }}
               {{- $x := mul (div (sub (float $p.Params.era_from) $min) $span) 100 -}}
               {{- $w := mul (div (sub (float $p.Params.era_to) (float $p.Params.era_from)) $span) 100 -}}
-              <li class="tcrow" style="--x:{{ printf "%.3f" $x }}%;--w:{{ printf "%.3f" $w }}%;--i:{{ $i }}">
+              {{- $periods := $p.Params.periods -}}
+              <li class="tcrow{{ if $periods }} tcrow--periods{{ end }}" style="--x:{{ printf "%.3f" $x }}%;--w:{{ printf "%.3f" $w }}%;--i:{{ $i }}">
                 <span class="tcrow__track" aria-hidden="true">
+                  {{- with $periods }}
+                  <span class="tcrow__periods">
+                    {{- range . }}
+                      {{- $px := mul (div (sub (float .from) $min) $span) 100 -}}
+                      {{- $pw := mul (div (sub (float .to) (float .from)) $span) 100 -}}
+                      <span class="tcper" style="--x:{{ printf "%.3f" $px }}%;--w:{{ printf "%.3f" $pw }}%" title="{{ .full | default .label }}">
+                        <span class="tcper__label">{{ .label }}</span>
+                      </span>
+                    {{- end }}
+                  </span>
+                  {{- end }}
                   <span class="tcrow__band" title="{{ $p.Params.coverage }}"></span>
                 </span>
                 <span class="tcrow__label">
                   <a class="tcrow__title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
                   {{- with $p.Params.homepage }}<a class="tcrow__ext" href="{{ . }}" rel="noopener" aria-label="Visit {{ $p.Title }} (live site)">↗</a>{{ end }}
-                  <span class="tcrow__meta">{{ $p.Params.category }}{{ with $p.Params.coverage }} · {{ . }}{{ end }}</span>
+                  <span class="tcrow__meta">{{ $p.Params.category }}{{ with $p.Params.coverage }} · {{ . }}{{ end }}{{ with $p.Params.period_source }} · {{ . }}{{ end }}</span>
                 </span>
               </li>
             {{- end }}
