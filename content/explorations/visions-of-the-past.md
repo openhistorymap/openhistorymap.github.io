@@ -4,6 +4,9 @@ date: 2025-03-05
 draft: false
 category: "street view"
 coverage: "All periods"
+era_from: -3500
+era_to: 2000
+ongoing: true
 sources: ["OHM Historical Street View"]
 status: "active"
 homepage: "https://visions.ofthepast.org"

@@ -4,6 +4,9 @@ date: 2026-06-02
 draft: false
 category: "gallery"
 coverage: "Narmer → Cleopatra"
+era_from: -3100
+era_to: -30
+ongoing: false
 sources: ["Wikipedia", "Wikidata"]
 status: "active"
 homepage: "http://www.openhistorymap.org/rulers.ofancientegypt.org/"

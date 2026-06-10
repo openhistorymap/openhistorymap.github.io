@@ -4,6 +4,9 @@ date: 2026-05-27
 draft: false
 category: "atlas"
 coverage: "1914 → 1918"
+era_from: 1914
+era_to: 1918
+ongoing: false
 sources: ["THOR", "Wikidata", "OpenStreetMap"]
 status: "active"
 homepage: "https://map.ofww1.org"

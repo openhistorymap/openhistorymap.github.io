@@ -4,6 +4,9 @@ date: 2026-06-02
 draft: false
 category: "atlas"
 coverage: "Antiquity → 18th c."
+era_from: -3000
+era_to: 1800
+ongoing: false
 sources: ["Wikipedia", "Wikidata"]
 status: "active"
 homepage: "https://rulers.ofthepast.org"

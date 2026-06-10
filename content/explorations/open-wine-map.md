@@ -4,6 +4,9 @@ date: 2026-06-07
 draft: false
 category: "atlas"
 coverage: "Present day"
+era_from: 1980
+era_to: 2000
+ongoing: true
 sources: ["OpenStreetMap", "Wikidata"]
 status: "active"
 homepage: "https://openwinemap.org"

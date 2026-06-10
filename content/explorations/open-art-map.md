@@ -4,6 +4,9 @@ date: 2026-05-15
 draft: false
 category: "atlas"
 coverage: "All periods"
+era_from: -3500
+era_to: 2000
+ongoing: true
 sources: ["Wikidata", "OpenStreetMap"]
 status: "active"
 homepage: "http://www.openhistorymap.org/openartmap/"

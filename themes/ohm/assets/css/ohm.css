@@ -953,3 +953,250 @@
   .stack-6 > * + * { margin-top: var(--sp-6); }
   .stack-8 > * + * { margin-top: var(--sp-8); }
 }
+
+/* =========================================================================
+   Explorations — deep-time chart
+   Each edition is a measured band on one shared chronological axis
+   (3500 BC -> AD 2000). Geometry (--x left%, --w width%) is computed in the
+   template from era_from / era_to; ongoing editions sit in their own register.
+   ========================================================================= */
+@layer components {
+  .timechart {
+    --tc-labelw: clamp(9rem, 24%, 15rem);
+    --tc-row-h: 2.5rem;
+    --tc-band-h: 7px;
+    margin: var(--sp-6) 0 var(--sp-12);
+  }
+
+  .timechart__note {
+    max-width: 62ch;
+    font-size: var(--t-body-sm);
+    color: var(--ink-muted);
+    margin-bottom: var(--sp-6);
+  }
+  .timechart__note em {
+    font-style: normal;
+    color: var(--terracotta);
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Axis labels — share the plot's 2-column template so ticks align to bands. */
+  .timechart__head {
+    display: grid;
+    grid-template-columns: 1fr var(--tc-labelw);
+    column-gap: 0;
+    align-items: end;
+    border-bottom: 1px solid var(--rule-strong);
+    padding-bottom: var(--sp-2);
+  }
+  .timechart__axis { position: relative; height: 1.1rem; }
+  .tc-tick {
+    position: absolute;
+    left: var(--x);
+    bottom: 0;
+    transform: translateX(-50%);
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .tc-tick:last-child { transform: translateX(-100%); }
+  .timechart__subject {
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-muted);
+    padding-left: var(--sp-4);
+  }
+
+  /* Plot — gridline layer behind the stacked rows. */
+  .timechart__plot { position: relative; }
+  .timechart__grid {
+    position: absolute;
+    inset: 0 var(--tc-labelw) 0 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .tc-gridline {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: var(--x);
+    width: 1px;
+    background: var(--rule);
+  }
+  .tc-gridline:last-child { background: var(--rule-strong); }
+
+  .tcrows {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tcrow {
+    display: grid;
+    grid-template-columns: 1fr var(--tc-labelw);
+    column-gap: 0;
+    align-items: center;
+    min-height: var(--tc-row-h);
+  }
+
+  .tcrow__track { position: relative; height: var(--tc-row-h); }
+  .tcrow__track::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 50%;
+    border-top: 1px dotted color-mix(in oklch, var(--rule) 65%, transparent);
+    z-index: 0;
+  }
+
+  .tcrow__band {
+    position: absolute;
+    top: 50%;
+    left: var(--x);
+    width: max(var(--w), 5px);
+    height: var(--tc-band-h);
+    transform: translateY(-50%);
+    transform-origin: left center;
+    background: var(--terracotta);
+    z-index: 1;
+    transition: background var(--t-fast) var(--ease-out),
+                box-shadow var(--t-fast) var(--ease-out);
+    animation: tc-draw 620ms var(--ease-out) backwards;
+    animation-delay: calc(var(--i) * 55ms + 120ms);
+  }
+  /* measured end-ticks — the precise start and end of the span */
+  .tcrow__band::before,
+  .tcrow__band::after {
+    content: "";
+    position: absolute;
+    top: -3px; bottom: -3px;
+    width: 1px;
+    background: var(--ink-muted);
+  }
+  .tcrow__band::before { left: 0; }
+  .tcrow__band::after  { right: 0; }
+
+  .tcrow:hover .tcrow__band {
+    background: color-mix(in oklch, var(--terracotta) 82%, var(--ink) 18%);
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--terracotta) 45%, transparent);
+  }
+
+  .tcrow__label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 var(--sp-2);
+    padding-left: var(--sp-4);
+    min-width: 0;
+  }
+  .tcrow__title {
+    font-family: var(--font-body);
+    font-weight: var(--w-medium);
+    font-size: var(--t-body-sm);
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .tcrow:hover .tcrow__title,
+  .tcrow__title:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--terracotta);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.16em;
+  }
+  .tcrow__ext {
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    color: var(--ink-muted);
+    text-decoration: none;
+    line-height: 1;
+  }
+  .tcrow__ext:hover { color: var(--terracotta); }
+  .tcrow__meta {
+    flex-basis: 100%;
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+  }
+
+  /* Ongoing register — patina, hatched, arrowed forward (still running). */
+  .tc-subrule {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    margin: var(--sp-6) 0 var(--sp-1);
+    padding-top: var(--sp-3);
+    border-top: 1px dashed var(--rule-strong);
+    font-family: var(--font-meta);
+    font-size: var(--t-meta);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted);
+  }
+  .tc-subrule::before {
+    content: "";
+    flex: none;
+    width: 16px;
+    height: var(--tc-band-h);
+    background: var(--patina);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent 0 3px,
+      color-mix(in oklch, var(--paper) 55%, transparent) 3px 4px
+    );
+  }
+  .tcrow--ongoing .tcrow__band {
+    background: var(--patina);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent 0 3px,
+      color-mix(in oklch, var(--paper) 55%, transparent) 3px 4px
+    );
+  }
+  .tcrow--ongoing .tcrow__band::after {
+    content: "\25B8";            /* small forward triangle */
+    width: auto;
+    top: 50%;
+    right: -0.85em;
+    bottom: auto;
+    transform: translateY(-50%);
+    background: none;
+    color: var(--patina);
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+  .tcrow--ongoing:hover .tcrow__band {
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--patina) 45%, transparent);
+  }
+
+  @keyframes tc-draw {
+    from { transform: translateY(-50%) scaleX(0); opacity: 0; }
+    to   { transform: translateY(-50%) scaleX(1); opacity: 1; }
+  }
+
+  @media (max-width: 640px) {
+    .timechart { --tc-labelw: 0px; }
+    .timechart__head { grid-template-columns: 1fr; }
+    .timechart__subject { display: none; }
+    .timechart__grid { inset: 0; }
+    .tcrow {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      padding-block: var(--sp-2);
+    }
+    .tcrow__track { height: 1.4rem; }
+    .tcrow__label { padding-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tcrow__band { animation: none; }
+  }
+}

@@ -4,6 +4,9 @@ date: 2026-05-27
 draft: false
 category: "atlas"
 coverage: "1939 → 1945"
+era_from: 1939
+era_to: 1945
+ongoing: false
 sources: ["THOR", "Wikidata", "OpenStreetMap"]
 status: "beta"
 homepage: "http://www.openhistorymap.org/map.ofww2.org/"

@@ -4,6 +4,9 @@ date: 2026-06-02
 draft: false
 category: "gallery"
 coverage: "Romulus → AD 476"
+era_from: -753
+era_to: 476
+ongoing: false
 sources: ["Wikipedia", "Wikidata"]
 status: "active"
 homepage: "https://rulers.ofancientrome.org"

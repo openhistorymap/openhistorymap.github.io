@@ -12,6 +12,19 @@ category: "atlas"
 #   "753 BC → AD 476" · "Antiquity → 18th c." · "1914 → 1918" · "Present day"
 coverage: ""
 
+# Numeric bounds used to plot this edition as a band on the section's shared
+# deep-time chart. Years are integers; BC is negative (753 BC → -753), and
+# there is no year zero (AD 1 is 1). For an edition that spans all of history,
+# use the chart's full range (-3500 to 2000). The plotted axis runs
+# 3500 BC → AD 2000; "now" lives in the ongoing register.
+era_from: 0
+era_to: 0
+
+# Set true for live, continuously-refreshed editions (present-day datasets or
+# all-period harvests). These render in the "ongoing" register beneath the
+# bounded historical editions, with a distinct band style.
+ongoing: false
+
 # Where the data comes from. Rendered as small badges:
 #   Wikidata · Wikipedia · OpenStreetMap · THOR · …
 sources: []

@@ -4,6 +4,9 @@ date: 2026-06-03
 draft: false
 category: "timeline"
 coverage: "753 BC → AD 476"
+era_from: -753
+era_to: 476
+ongoing: false
 sources: ["Wikidata", "Wikipedia"]
 status: "active"
 homepage: "https://ideas.ofancientrome.org"

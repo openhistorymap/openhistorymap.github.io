@@ -1,4 +1,24 @@
 {{ define "main" }}
+  {{- /* Deep-time chart of the editions. Each one is plotted as a measured band
+         on a single shared chronological axis (3500 BC → AD 2000); live
+         "all-periods / present-day" editions sit in the ongoing register below.
+         All geometry is derived from era_from / era_to in front matter. */ -}}
+  {{- $min := -3500.0 -}}
+  {{- $max :=  2000.0 -}}
+  {{- $span := sub $max $min -}}
+
+  {{- $ticks := slice
+      (dict "y" -3000.0 "l" "3000 BC")
+      (dict "y" -2000.0 "l" "2000 BC")
+      (dict "y" -1000.0 "l" "1000 BC")
+      (dict "y"     0.0 "l" "AD 1")
+      (dict "y"  1000.0 "l" "AD 1000")
+      (dict "y"  2000.0 "l" "AD 2000") -}}
+
+  {{- $pages   := .RegularPages -}}
+  {{- $bounded := sort (where $pages "Params.ongoing" "!=" true) "Params.era_from" "asc" -}}
+  {{- $ongoing := sort (where $pages "Params.ongoing" true)        "Params.era_from" "asc" -}}
+
   <div class="span-content">
     {{ partial "meta-strip.html" . }}
 
@@ -8,38 +28,76 @@
       {{- with .Content }}<div class="prose">{{ . }}</div>{{ end }}
     </header>
 
-    {{- $pages := .RegularPages -}}
     {{- if $pages }}
-      <h2 class="section-rule"><span>{{ len $pages }} explorations</span></h2>
-      <ul class="tools" role="list">
-        {{- range $pages.ByTitle }}
-          {{- $plateNo := substr (md5 .Permalink) 0 4 | upper -}}
-          <li class="tool">
-            <div class="tool__plate-no">№.{{ $plateNo }}</div>
-            <div class="tool__body">
-              <h3 class="tool__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-              <ul class="tool__badges" role="list">
-                {{- with .Params.category }}<li class="tool__badge">{{ . }}</li>{{ end }}
-                {{- with .Params.coverage }}<li class="tool__badge">{{ . }}</li>{{ end }}
-                {{- with .Params.status }}<li class="tool__badge tool__badge--status tool__badge--{{ . | urlize }}">{{ . }}</li>{{ end }}
-                {{- range .Params.sources }}<li class="tool__badge tool__badge--lang">{{ . }}</li>{{ end }}
-              </ul>
-              {{- if .Description }}<p class="tool__excerpt">{{ .Description }}</p>
-              {{- else if .Summary }}<p class="tool__excerpt">{{ .Summary | plainify | truncate 200 }}</p>
+      <h2 class="section-rule"><span>{{ len $pages }} editions, on a shared timeline</span></h2>
+
+      <figure class="timechart" role="group"
+              aria-label="The editions plotted on a timeline from 3500 BC to the present.">
+        <figcaption class="timechart__note">
+          Each bar marks the span an edition covers, plotted left-to-right from
+          deep antiquity to today. The four <em>ongoing</em> editions below are
+          live datasets, refreshed on a schedule.
+        </figcaption>
+
+        {{- /* Axis: year labels aligned to the plot column. */ -}}
+        <div class="timechart__head" aria-hidden="true">
+          <div class="timechart__axis">
+            {{- range $ticks }}
+              {{- $tx := mul (div (sub .y $min) $span) 100 -}}
+              <span class="tc-tick" style="--x:{{ printf "%.3f" $tx }}%">{{ .l }}</span>
+            {{- end }}
+          </div>
+          <div class="timechart__subject">Edition</div>
+        </div>
+
+        <div class="timechart__plot">
+          {{- /* Vertical gridlines span the whole plot, behind every row. */ -}}
+          <div class="timechart__grid" aria-hidden="true">
+            {{- range $ticks }}
+              {{- $tx := mul (div (sub .y $min) $span) 100 -}}
+              <span class="tc-gridline" style="--x:{{ printf "%.3f" $tx }}%"></span>
+            {{- end }}
+          </div>
+
+          <ol class="tcrows" role="list">
+            {{- range $i, $p := $bounded }}
+              {{- $x := mul (div (sub (float $p.Params.era_from) $min) $span) 100 -}}
+              {{- $w := mul (div (sub (float $p.Params.era_to) (float $p.Params.era_from)) $span) 100 -}}
+              <li class="tcrow" style="--x:{{ printf "%.3f" $x }}%;--w:{{ printf "%.3f" $w }}%;--i:{{ $i }}">
+                <span class="tcrow__track" aria-hidden="true">
+                  <span class="tcrow__band" title="{{ $p.Params.coverage }}"></span>
+                </span>
+                <span class="tcrow__label">
+                  <a class="tcrow__title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+                  {{- with $p.Params.homepage }}<a class="tcrow__ext" href="{{ . }}" rel="noopener" aria-label="Visit {{ $p.Title }} (live site)">↗</a>{{ end }}
+                  <span class="tcrow__meta">{{ $p.Params.category }}{{ with $p.Params.coverage }} · {{ . }}{{ end }}</span>
+                </span>
+              </li>
+            {{- end }}
+
+            {{- if $ongoing }}
+              <li class="tc-subrule"><span>Ongoing · continuously refreshed</span></li>
+              {{- range $i, $p := $ongoing }}
+                {{- $x := mul (div (sub (float $p.Params.era_from) $min) $span) 100 -}}
+                {{- $w := mul (div (sub (float $p.Params.era_to) (float $p.Params.era_from)) $span) 100 -}}
+                {{- $j := add (len $bounded) $i -}}
+                <li class="tcrow tcrow--ongoing" style="--x:{{ printf "%.3f" $x }}%;--w:{{ printf "%.3f" $w }}%;--i:{{ $j }}">
+                  <span class="tcrow__track" aria-hidden="true">
+                    <span class="tcrow__band" title="{{ $p.Params.coverage }}"></span>
+                  </span>
+                  <span class="tcrow__label">
+                    <a class="tcrow__title" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+                    {{- with $p.Params.homepage }}<a class="tcrow__ext" href="{{ . }}" rel="noopener" aria-label="Visit {{ $p.Title }} (live site)">↗</a>{{ end }}
+                    <span class="tcrow__meta">{{ $p.Params.category }}{{ with $p.Params.coverage }} · {{ . }}{{ end }}</span>
+                  </span>
+                </li>
               {{- end }}
-              <div class="tool__links">
-                {{- with .Params.homepage }}<a href="{{ . }}" rel="noopener">Visit ↗</a>{{ end }}
-                {{- with .Params.repo }}<a href="{{ . }}" rel="noopener">Source ↗</a>{{ end }}
-                <a href="{{ .RelPermalink }}">Read more →</a>
-              </div>
-            </div>
-          </li>
-        {{- end }}
-      </ul>
+            {{- end }}
+          </ol>
+        </div>
+      </figure>
     {{- else }}
-      <p class="prose" style="color: var(--ink-muted)">
-        Nothing here yet.
-      </p>
+      <p class="prose" style="color: var(--ink-muted)">Nothing here yet.</p>
     {{- end }}
   </div>
 {{ end }}

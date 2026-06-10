@@ -4,6 +4,9 @@ date: 2026-06-07
 draft: false
 category: "map"
 coverage: "Present day · Europe"
+era_from: 1980
+era_to: 2000
+ongoing: true
 sources: ["OpenStreetMap", "Wikidata"]
 status: "active"
 homepage: "http://www.openhistorymap.org/openculturemap/"
