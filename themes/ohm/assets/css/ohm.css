@@ -1194,7 +1194,14 @@
       color-mix(in oklch, var(--paper) 55%, transparent) 3px 4px
     );
   }
+  /* Ongoing editions are living datasets, not historical spans — pin them to
+     "now" (the right edge) at a uniform width rather than plotting era_from/to
+     (which would stretch the all-period ones across the whole axis). */
   .tcrow--ongoing .tcrow__band {
+    left: auto;
+    right: 0;
+    width: clamp(3.5rem, 8%, 6rem);
+    transform-origin: right center;
     background: var(--patina);
     background-image: repeating-linear-gradient(
       -45deg,
@@ -1202,6 +1209,7 @@
       color-mix(in oklch, var(--paper) 55%, transparent) 3px 4px
     );
   }
+  .tcrow--ongoing .tcrow__band::before { display: none; } /* no start tick at "now" */
   .tcrow--ongoing .tcrow__band::after {
     content: "\25B8";            /* small forward triangle */
     width: auto;
