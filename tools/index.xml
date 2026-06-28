@@ -4,7 +4,8 @@ the &lt;a href="https://www.openhistorymap.org/tools/geocontext-front/"&gt;Geoco
 &lt;p&gt;Where the QGIS plugin captures a bundle from an existing GIS project and the
 web front-end renders one for readers, the editor sits in between: open a
 &lt;code&gt;gcx.json&lt;/code&gt;, edit its manifest and datasets, and commit the result — no QGIS
-session required.&lt;/p&gt;</description></item><item><title>Harris MCP</title><link>https://www.openhistorymap.org/tools/harris-mcp/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/harris-mcp/</guid><description>&lt;p&gt;The Harris matrix is how archaeologists record stratigraphy: the ordered
+session required.&lt;/p&gt;
+&lt;p&gt;Part of the &lt;strong&gt;&lt;a href="https://geocontext.info"&gt;GeoContext&lt;/a&gt;&lt;/strong&gt; project.&lt;/p&gt;</description></item><item><title>Harris MCP</title><link>https://www.openhistorymap.org/tools/harris-mcp/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/harris-mcp/</guid><description>&lt;p&gt;The Harris matrix is how archaeologists record stratigraphy: the ordered
 relationships between the layers and cuts of an excavation. &lt;code&gt;harris-mcp&lt;/code&gt;
 exposes those matrices to LLM agents through the Model Context Protocol, with
 adapters for the common interchange formats — HMDP, CSV, XLSX and HMC/HMCX.&lt;/p&gt;
@@ -37,13 +38,17 @@ bakes them. It slices the data by time partition, writes each slice out as a
 single-file PMTiles archive, and publishes the result to Cloudflare R2.&lt;/p&gt;
 &lt;p&gt;The payoff is static hosting: a PMTiles file on object storage serves a whole
 time window straight to the client, no tile server in the loop — cheaper to
-run and trivial to cache or mirror.&lt;/p&gt;</description></item><item><title>HTFS — Historical Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HTFS is the equivalent draft
-for &lt;em&gt;historical&lt;/em&gt; ones, where every line, stop and schedule comes with an
-explicit time-of-validity so a network can be reconstructed for any
-chosen date.&lt;/p&gt;
-&lt;p&gt;The repository is archived but the design is the basis for ongoing work
-on transit layers inside OHM, and the spec is the right starting point
-for anyone modelling historical mobility data.&lt;/p&gt;</description></item><item><title>Map Styles</title><link>https://www.openhistorymap.org/tools/mapstyles/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/mapstyles/</guid><description>&lt;p&gt;A small repository of MapLibre / Mapbox-style JSON definitions used to
+run and trivial to cache or mirror.&lt;/p&gt;</description></item><item><title>HGTFS — Historical General Transit Feed Specification</title><link>https://www.openhistorymap.org/tools/htfs/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/htfs/</guid><description>&lt;p&gt;GTFS describes today&amp;rsquo;s transit networks; HGTFS is the equivalent for
+&lt;em&gt;historical&lt;/em&gt; ones. Every stop, route, network edge and operator carries an
+explicit time-of-validity, so a network can be reconstructed for any chosen
+date — and where the historical record is uncertain, the dates say so
+(&lt;code&gt;date_opened&lt;/code&gt; bounded by min/max, closures asserted only on evidence).&lt;/p&gt;
+&lt;p&gt;The specification is developed in the open at
+&lt;strong&gt;&lt;a href="https://hgtfs.github.io"&gt;hgtfs.github.io&lt;/a&gt;&lt;/strong&gt; — a full field reference plus a
+time-aware web &lt;strong&gt;&lt;a href="https://hgtfs.github.io/viewer/"&gt;viewer&lt;/a&gt;&lt;/strong&gt; that scrubs a feed
+through time and recolours the network as operators change. It grew out of the
+earlier, archived &lt;a href="https://github.com/openhistorymap/HTFS"&gt;openhistorymap/HTFS&lt;/a&gt;
+draft and is the basis for transit layers inside OHM.&lt;/p&gt;</description></item><item><title>Map Styles</title><link>https://www.openhistorymap.org/tools/mapstyles/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/mapstyles/</guid><description>&lt;p&gt;A small repository of MapLibre / Mapbox-style JSON definitions used to
 render the OHM tile layers. Useful if you want to embed an OHM map in
 your own site, or fork a style as a starting point for a custom
 historical cartography.&lt;/p&gt;</description></item><item><title>OHM Map</title><link>https://www.openhistorymap.org/tools/ohm-map/</link><pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/ohm-map/</guid><description>&lt;p&gt;The OHM web client is the canonical entry point to the project&amp;rsquo;s data:
@@ -70,7 +75,8 @@ browser into a one-click pipeline for enriching OHM source records.&lt;/p&gt;</d
 interactive map.&lt;/p&gt;
 &lt;p&gt;It is designed to be hosted alongside the bundle itself — drop the
 front-end and a Geocontext repository on the same host (or on GitHub
-Pages) and the bundle becomes a self-contained, shareable atlas.&lt;/p&gt;</description></item><item><title>Geocontext QGIS Plugin</title><link>https://www.openhistorymap.org/tools/geocontext-qgis/</link><pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/geocontext-qgis/</guid><description>&lt;p&gt;A QGIS plugin aimed at researchers who already work in QGIS and want to
+Pages) and the bundle becomes a self-contained, shareable atlas.&lt;/p&gt;
+&lt;p&gt;Part of the &lt;strong&gt;&lt;a href="https://geocontext.info"&gt;GeoContext&lt;/a&gt;&lt;/strong&gt; project.&lt;/p&gt;</description></item><item><title>Geocontext QGIS Plugin</title><link>https://www.openhistorymap.org/tools/geocontext-qgis/</link><pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate><guid>https://www.openhistorymap.org/tools/geocontext-qgis/</guid><description>&lt;p&gt;A QGIS plugin aimed at researchers who already work in QGIS and want to
 publish a slice of their project as an open, shareable bundle.&lt;/p&gt;
 &lt;p&gt;The plugin captures the current view — extents, layers and selected
 datasets — and writes them out as a &lt;code&gt;gcx.json&lt;/code&gt; manifest plus
