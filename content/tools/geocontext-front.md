@@ -18,3 +18,5 @@ interactive map.
 It is designed to be hosted alongside the bundle itself — drop the
 front-end and a Geocontext repository on the same host (or on GitHub
 Pages) and the bundle becomes a self-contained, shareable atlas.
+
+Part of the **[GeoContext](https://geocontext.info)** project.

@@ -6,7 +6,7 @@ category: "plugin"
 language: "Python"
 status: "active"
 repo: "https://github.com/openhistorymap/geocontext-qgis"
-homepage: ""
+homepage: "https://geocontext.info"
 download: "https://github.com/openhistorymap/geocontext-qgis/releases"
 description: "QGIS plugin that exports the current map view as a Geocontext bundle (gcx.json + GeoJSON datasets) and pushes it to a GitHub repository."
 ---
@@ -19,3 +19,5 @@ datasets — and writes them out as a `gcx.json` manifest plus
 `datasets/*.geojson`, then optionally pushes the result to a GitHub
 repository via the system `git`. The matching front-end (see
 *Geocontext Front-End*) renders these bundles back to a browser.
+
+Part of the **[GeoContext](https://geocontext.info)** project.
